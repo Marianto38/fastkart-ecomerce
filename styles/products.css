@@ -149,9 +149,12 @@ li {
   'GRAD' 0,
   'opsz' 48
 }
- #dropdownMenuButton2 .dropdown-toggle .dropdown-toggle::after  div button {
+ /* #dropdownMenuButton2 .dropdown-toggle .dropdown-toggle::after  div button {
    display: none !important;
 }
 .dropdown-toggle::after > #dropdownMenuButton2 {
   display: none !important;
+} */
+.dropdown-menu {
+  min-width: 20rem;
 }

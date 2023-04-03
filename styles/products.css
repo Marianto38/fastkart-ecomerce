@@ -27,18 +27,18 @@ visibility: hidden;
 /* display: none; */
 position: absolute;
 text-align: center;
-left: 40%;
-top: 50%;
-font-size: 150%;
+left: 25%;
+top: 35%;
+font-size: 100%;
 visibility: hidden;
 }
 .card-product:hover .card-links{
   display: flex;
   position: absolute;
   text-align: center;
-  left: 40%;
-  top: 50%;
-  font-size: 150%;
+  left: 25%;
+  top: 35%;
+  font-size: 100%;
   visibility: visible;
 
   }
@@ -131,6 +131,39 @@ li {
 .btn-success {
   background-color: #0da487 !important;
 }
+.text-success {
+  color: #0da487 !important;
+}
+.bg-offer {
+  background-color: #ffff;
+ max-width: 80%;
+ opacity: .5px;
+ border-top-right-radius: 50px;
+border-bottom-right-radius: 50px;
+padding-left: 0;
+
+}
+
+.img-publi-3 {
+  position: absolute;
+  width: 150px;
+  bottom: 0%;
+  right: 0%;
+  z-index: 0;
+}
+.aaa {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 180px;
+  /* background-color: #0da487; */
+  border: #ffa53b;
+ border-top-left-radius: 50% 50%;
+  border-top-right-radius: 50% 50%;
+  height: 4rem;
+  z-index: 100;
+}
+
 /* ******************maedia query******************** */
 @media (max-width: 600px) {
 .navbar-dark .navbar-brand {
@@ -157,4 +190,10 @@ li {
 } */
 .dropdown-menu {
   min-width: 20rem;
+}
+.bg-info {
+  background-color: #f3f2ee !important;
+}
+.btn-warning {
+  background-color: #ff835d;
 }

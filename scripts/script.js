@@ -10,6 +10,13 @@ const product = {
   "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU"
 }
 
+import $ from 'jquery'
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'
+
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+
 
 // const crearProducto= async(producto) => {
 //   const opciones= {

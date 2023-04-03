@@ -66,71 +66,94 @@ const getProductByCategory = async (category) => {
 
   // *********************Pintar cards de productos ********************************
 
-  const productContainer = document.querySelector('.container-products');
+  export const productContainer = document.querySelector('.container-products');
   console.log(productContainer);
 
-  const getProducts = async () => {
+
+  export const getProducts = async () => {
     const response = await fetch(url);
     const data = await response.json();
     console.log("data del getProducts", data);
 
-      //Vacio el contenedor
-      productContainer.innerHTML = "";
+    //recorro el objeto data entregado por el fetch
+    for (const key in data) {
+      if (data.hasOwnProperty.call(data, key)) {
+        const product = data[key];
+        console.log("un producto", product)
 
-      //recorro el objeto data entregado por el fetch
-      for (const key in data) {
-        if (data.hasOwnProperty.call(data, key)) {
-          const product = data[key];
-          console.log("un producto", product)
+        printProduct(productContainer, product);
+      }
+    }
+  }
+getProducts();
 
-      // agrego el elemento al html
 
-      productContainer.innerHTML += `
-      <!-- ***************cards de producto***************** -->
-      <div class="col  card-product">
-        <div class="card h-100">
-        <i class="fa-sharp fa-solid fa-circle-xmark fs-2 close-btn"></i>
-        <div class="row justify-content-center card-links">
-          <div class="col px-3">
-            <i class="fa-solid fa-eye"></i>
-          </div>
-          <div class="col border-start border-end px-3">
-            <i class="fa-solid fa-arrows-rotate"></i>
-          </div>
-          <div class="col px-3">
-            <i class="fa-solid fa-heart fa-beat text-dark"></i>
-          </div>
-        </div>
-        <div class="new" >
+ // agrego el elemento al html
+ export const printProduct = (container, product) => {
+  //Vacio el contenedor
+  // container.innerHTML = "";
+  container.innerHTML += `
+  <!-- ***************cards de producto***************** -->
+  <div class="col  card-product">
+    <div class="card h-100">
+    <i class="fa-sharp fa-solid fa-circle-xmark fs-2 close-btn"></i>
+    <div class="row justify-content-center card-links">
+      <div class="col px-3">
+        <i class="fa-solid fa-eye"  data-product="product" id=${product.id}></i>
+      </div>
+      <div class="col border-start border-end px-3">
+        <i class="fa-solid fa-arrows-rotate"></i>
+      </div>
+      <div class="col px-3">
+        <i class="fa-solid fa-heart fa-beat text-dark"></i>
+      </div>
+    </div>
+    <div class="new" >
 
-        </div>
-          <img src="${product.img}" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text text-truncate">${product.category}</p>
-            <h5 class="card-title title">${product.name} ${product.weight}</h5>
-            <p class="card-text text-truncate">${product.weight}</p>
-            <p class="card-text text-truncate">$${product.price} <span class="text-decoration-line-through"> $${product.price - (product.price * product.discount / 100)}</span></p>
+    </div>
+      <img src="${product.img}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text text-truncate">${product.category}</p>
+        <h5 class="card-title title fs-6">${product.name} ${product.weight}</h5>
+        <p class="card-text text-truncate">${product.weight}</p>
+        <p class="card-text text-truncate">$${product.price} <span class="text-decoration-line-through"> $${product.price - (product.price * product.discount / 100)}</span></p>
+      </div>
+      <div>
+        <div class="row bg-success justify-content-center align-items-center mx-2  mb-3 py-1 rounded-pill">
+          <div class="col text-start">
+            <i class="fa-solid fa-minus rounded-circle bg-light p-2"></i>
           </div>
-          <div>
-            <div class="row bg-success justify-content-center align-items-center  mb-3 mx-5 py-2 rounded-pill">
-              <div class="col text-start">
-                <i class="fa-solid fa-minus rounded-circle bg-light p-2"></i>
-              </div>
-              <div class="col">
-                <p class="card-text text-center">ADD</p>
-              </div>
-              <div class="col text-end me-0">
-                <i class="fa-solid fa-plus rounded-circle bg-light p-2 m-0"></i>
-              </div>
-            </div>
+          <div class="col">
+            <p class="card-text text-center">ADD</p>
+          </div>
+          <div class="col text-end">
+            <i class="fa-solid fa-plus rounded-circle bg-light p-2 m-0"></i>
           </div>
         </div>
       </div>
-      <!-- ***************cards de producto***************** -->
-        `;
-      }
-    }
+    </div>
+  </div>
+  <!-- ***************cards de producto***************** -->
+    `;
+}
+//getProducts();
+//printProduct(productContainer, product);
 
+// const containerProduct = document.getElementById('container-product-id')
+// console.log(containerProduct)
+
+
+//4. Escucho el click sobre cada product
+document.addEventListener("click", (event) => {
+  console.log(event.target);
+//indico el atributo donde quiero escuchar el click
+  const productTarget = event.target.getAttribute("data-product");
+  if (productTarget === "product") {
+    // event.preventDefault();
+    console.log('voy a ver product');
+    const productId = event.target.getAttribute("id");
+    //pasar el objeto al json
+    localStorage.setItem("productId", JSON.stringify(productId));
+    window.location.href = "./product.html";
   }
-
-getProducts();
+});

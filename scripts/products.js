@@ -1,4 +1,4 @@
-const url = "http://localhost:3000/products"
+export const url = "http://localhost:3000/products"
 const product =
   {
     "id": 1,
@@ -98,14 +98,14 @@ getProducts();
     <div class="card h-100">
     <i class="fa-sharp fa-solid fa-circle-xmark fs-2 close-btn"></i>
     <div class="row justify-content-center card-links">
-      <div class="col px-3">
+      <div class="col px-3" data-product="product" id=${product.id}>
         <i class="fa-solid fa-eye"  data-product="product" id=${product.id}></i>
       </div>
       <div class="col border-start border-end px-3">
         <i class="fa-solid fa-arrows-rotate"></i>
       </div>
-      <div class="col px-3">
-        <i class="fa-solid fa-heart fa-beat text-dark"></i>
+      <div class="col px-3" data-favorite="favorite" id=${product.id}>
+        <i class="fa-solid fa-heart text-dark" data-favorite="favorite" id=${product.id}></i>
       </div>
     </div>
     <div class="new" >
@@ -148,6 +148,7 @@ document.addEventListener("click", (event) => {
   console.log(event.target);
 //indico el atributo donde quiero escuchar el click
   const productTarget = event.target.getAttribute("data-product");
+  const productFavorite = event.target.getAttribute("data-favorite");
   if (productTarget === "product") {
     // event.preventDefault();
     console.log('voy a ver product');
@@ -155,5 +156,13 @@ document.addEventListener("click", (event) => {
     //pasar el objeto al json
     localStorage.setItem("productId", JSON.stringify(productId));
     window.location.href = "./product.html";
+  }
+  else if (productFavorite === "favorite") {
+    event.preventDefault();
+    console.log('voy a agregar a favoritos');
+    const productToFavorite = event.target.getAttribute("id");
+    //pasar el objeto al json
+    localStorage.setItem("productToFavorite", JSON.stringify(productToFavorite));
+    //  window.location.href = "./product.html";
   }
 });

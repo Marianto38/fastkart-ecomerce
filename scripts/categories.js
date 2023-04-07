@@ -78,4 +78,4 @@ const categories = async () => {
       }
   });
 }
-categories();
+//categories();

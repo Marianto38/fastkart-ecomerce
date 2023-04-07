@@ -66,25 +66,29 @@ const getProductByCategory = async (category) => {
 
   // *********************Pintar cards de productos ********************************
 
-  export const productContainer = document.querySelector('.container-products');
-  console.log(productContainer);
+export const productContainer = document.querySelector('.container-products');
+console.log(productContainer);
 
-
-  export const getProducts = async () => {
-    const response = await fetch(url);
-    const data = await response.json();
+export const getProducts = async () => {
+  try {
+    const response = await axios.get(url);
+    const data = response.data;
     console.log("data del getProducts", data);
 
-    //recorro el objeto data entregado por el fetch
+    // recorro el objeto data entregado por el fetch
     for (const key in data) {
       if (data.hasOwnProperty.call(data, key)) {
         const product = data[key];
-        console.log("un producto", product)
+        console.log("un producto", product);
 
         printProduct(productContainer, product);
       }
     }
+  } catch (error) {
+    console.error(error);
   }
+};
+
 getProducts();
 
 

@@ -28,6 +28,31 @@ async function obtenerObjetoPorId(id) {
             "category": `${productFromLs.category}`,
             "img": `${productFromLs.img}`
           }
+          async function getProductos() {
+            try {
+              const response = await axios.get(urlFavorites);
+              const data = response.data;
+              for (const key in data) {
+                if (data.hasOwnProperty.call(data, key)) {
+                  const element = data[key];
+                  console.log(element.id)
+                  console.log(typeof(productNew.id))
+                  if (element.id == Number(productNew.id)) {
+                      console.log(`El producto con id ${productNew.id} ya existe en el array`);
+                    } else {
+                      enviarObjeto(productNew)
+                      console.log(`El producto con id ${productNew.id} no existe en el array`);
+                    }
+                }
+              }
+              // return data;
+            } catch (error) {
+              console.error(error);
+            }
+          }
+
+          getProductos();
+
 
           async function enviarObjeto(objeto) {
             try {
@@ -37,7 +62,7 @@ async function obtenerObjetoPorId(id) {
               console.error(error);
             }
           }
-          enviarObjeto(productNew)
+
 
       }
     }

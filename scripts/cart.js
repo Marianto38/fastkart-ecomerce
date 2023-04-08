@@ -112,21 +112,21 @@ getProducts();
   //container.innerHTML = "";
   container.innerHTML += `
   <!-- ***************cards de producto***************** -->
-  <a class="dropdown-item" href="#"><div class="card mb-0" style="max-width: 400px;">
-  <div class="row g-0 pt-2">
-  <div class="d-flex justify-content-end mb-0 pe-2"><i class="fa-solid fa-xmark" style="color: #000000;"></i></div>
-    <div class="col-md-4">
-      <img src="${product.img}" class="img-fluid rounded-start" alt="${product.name}">
+  <div class="dropdown-item" href="#"><div class="card mb-0" style="max-width: 400px;">
+    <div class="row g-0 pt-2">
+      <div class="d-flex justify-content-end mb-0 pe-2" ><i class="fa-solid fa-xmark"  data-delete="delete-of-cart" id=${product.id} style="color: #000000;"></i></div>
+        <div class="col-md-4">
+          <img src="${product.img}" class="img-fluid rounded-start" alt="${product.name}">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body py-0">
+            <h5 class="card-title text-truncate text-success">${product.name}e</h5>
+            <p class="card-text"><small class="text-muted"> x $${product.price}</small></p>
+          </div>
+        </div>
     </div>
-    <div class="col-md-8">
-      <div class="card-body py-0">
-        <h5 class="card-title text-truncate text-success">${product.name}e</h5>
-        <p class="card-text"><small class="text-muted"> x $${product.price}</small></p>
-      </div>
-    </div>
-
   </div>
-</div></a>
+</div>
 
   <!-- ***************cards de producto***************** -->
     `;
@@ -135,28 +135,29 @@ getProducts();
 
 // // *******************eliminar un producto de favoritos************************
 
-// document.addEventListener("click", (event) => {
-//   console.log(event.target);
+document.addEventListener("click", (event) => {
+ // event.preventDefault
+  console.log(event.target);
 // //indico el atributo donde quiero escuchar el click
-//   const favoriteId = event.target.getAttribute("id");
-//   const dataDeleteFavorite = event.target.getAttribute("data-delete-favorite")
+  const cartItemId = event.target.getAttribute("id");
+  const dataDeleteCartItem = event.target.getAttribute("data-delete")
+  console.log("datadelete", dataDeleteCartItem)
+ if (dataDeleteCartItem === "delete-of-cart") {
+   console.log("voy a borrar", cartItemId)
 
-// if (dataDeleteFavorite === "favorite") {
-//   console.log("voy a borrar", favoriteId)
+// Crear una instancia de Axios
+const axiosInstance = axios.create({
+  baseURL: 'http://localhost:3000',
+});
 
-// // Crear una instancia de Axios
-// const axiosInstance = axios.create({
-//   baseURL: 'http://localhost:3000',
-// });
-
-// async function deleteData(id) {
-//   try {
-//     const response = await axiosInstance.delete(`/favorites/${id}`);
-//     console.log(response.data); // Imprimir la respuesta del servidor en la consola
-//   } catch (error) {
-//     console.error(error); // Manejar cualquier error que ocurra durante la solicitud
-//   }
-// }
-// deleteData(Number(favoriteId))
-// }
-// });
+async function deleteData(id) {
+  try {
+    const response = await axiosInstance.delete(`/shopping/${id}`);
+    console.log(response.data); // Imprimir la respuesta del servidor en la consola
+  } catch (error) {
+    console.error(error); // Manejar cualquier error que ocurra durante la solicitud
+  }
+}
+deleteData(Number(cartItemId))
+}
+});

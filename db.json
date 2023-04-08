@@ -107,6 +107,24 @@
   ],
   "shopping": [
     {
+      "id": "2",
+      "name": "Tomate id 2 aaaaaa aaaaa aaaaaa aaaaa aaaaa aaaaa aaaaaa aaaaaa aaaaa aaaaaaaa aaaaaaaaaa",
+      "weight": "500g",
+      "price": "500",
+      "discount": "15",
+      "category": "fruits",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU"
+    },
+    {
+      "id": "1",
+      "name": "Tomate",
+      "weight": "500g",
+      "price": "500",
+      "discount": "15",
+      "category": "vegetables & fruits",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU"
+    },
+    {
       "id": "4",
       "name": "Tomate id 4",
       "weight": "500g",
@@ -116,12 +134,12 @@
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU"
     },
     {
-      "id": "2",
-      "name": "Tomate id 2 aaaaaa aaaaa aaaaaa aaaaa aaaaa aaaaa aaaaaa aaaaaa aaaaa aaaaaaaa aaaaaaaaaa",
+      "id": "3",
+      "name": "Tomate id 3",
       "weight": "500g",
       "price": "500",
-      "discount": "15",
-      "category": "fruits",
+      "discount": "",
+      "category": "vegetables",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU"
     }
   ]

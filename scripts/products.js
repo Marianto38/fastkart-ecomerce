@@ -128,7 +128,7 @@ getProducts();
             <i class="fa-solid fa-minus rounded-circle bg-light p-2"></i>
           </div>
           <div class="col">
-            <p class="card-text text-center">ADD</p>
+            <p class="card-text text-center" data-add-to-cart="add" id=${product.id}>ADD</p>
           </div>
           <div class="col text-end">
             <i class="fa-solid fa-plus rounded-circle bg-light p-2 m-0"></i>
@@ -153,6 +153,7 @@ document.addEventListener("click", (event) => {
 //indico el atributo donde quiero escuchar el click
   const productTarget = event.target.getAttribute("data-product");
   const productFavorite = event.target.getAttribute("data-favorite");
+  const addProductToCart = event.target.getAttribute("data-add-to-cart");
   if (productTarget === "product") {
     // event.preventDefault();
     console.log('voy a ver product');
@@ -167,6 +168,15 @@ document.addEventListener("click", (event) => {
     const productToFavorite = event.target.getAttribute("id");
     //pasar el objeto al json
     localStorage.setItem("productToFavorite", JSON.stringify(productToFavorite));
+    //  window.location.href = "./product.html";
+  }
+  else if (addProductToCart === "add") {
+    event.preventDefault();
+    console.log('voy a agregar a carrito');
+
+    const productToCart = event.target.getAttribute("id");
+    //pasar el objeto al json
+    localStorage.setItem("productToCart", JSON.stringify(productToCart));
     //  window.location.href = "./product.html";
   }
 });

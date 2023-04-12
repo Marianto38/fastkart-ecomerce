@@ -1,5 +1,7 @@
-import { url  } from "./products.js";
+import { url, printProduct  } from "./products.js";
 export const urlShopping = "http://localhost:3000/shopping"
+const containerCartDropdown = document.querySelector('.container-cart-dropdown')
+const containerShowProductsInCart = document.querySelector('.container-products-in-cart')
 
 console.log("conectado a cart.js")
 // const containerCartDropdown = document.querySelector('.container-cart-dropdown')
@@ -76,38 +78,62 @@ obtenerObjetoPorId(productId)
 
   // *********************Pintar cards de productos ********************************
 
-// export const productContainerFavorites = document.querySelector('.container-products-favorites');
-// console.log(productContainerFavorites);
+  export const getProducts = async () => {
+    try {
+      const response = await axios.get(urlShopping);
+      const data = response.data;
+      console.log("data del getProducts en linea 85 del cart", data);
 
-export const getProducts = async () => {
-  try {
-    const response = await axios.get(urlShopping);
-    const data = response.data;
-    console.log("data del getProducts", data);
+      const products = [];
 
-    // recorro el objeto data entregado por el fetch
-    for (const key in data) {
-      if (data.hasOwnProperty.call(data, key)) {
-        const product = data[key];
+      // recorro el array de productos entregado por el fetch y agrego cada producto al array products
+      for (const product of Object.values(data)) {
         console.log("un producto", product);
-
-const containerCartDropdown = document.querySelector('.container-cart-dropdown')
-        printProduct(containerCartDropdown, product);
+        products.push(product);
       }
-    }
-  } catch (error) {
-    console.error(error);
-  }
-};
 
-getProducts();
+      return products; // retorno el array de productos
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  // función que se ejecutará después de que se resuelva la promesa de getProducts
+  const printProductsInDropdown = async () => {
+    // para utilizar los productos fuera de la función, asigno el resultado de getProducts a una variable
+    const products = await getProducts();
+
+    // recorro el array de productos y ejecuto la función para cada producto
+    products.forEach((product) => {
+      printProductInDropdown(containerCartDropdown, product);
+    });
+
+    console.log(products);
+  };
+
+
+  // llamo a la función printProductsInDropdown para imprimir los productos
+  printProductsInDropdown();
+
+  // *******************mostrar los productos en cart.html**************************
+
+    const printProductsInCartHtml = async () => {
+      const products = await getProducts();
+      products.forEach((product) => {
+        printProductInCart(containerShowProductsInCart, product);
+      });
+    };
+
+
+    // llamo a la función printProductsInCartHtml para imprimir los productos
+    printProductsInCartHtml();
 
 
 
 
 
  // agrego el elemento al html
- export const printProduct = (container, product) => {
+ export const printProductInDropdown = (container, product) => {
   //Vacio el contenedor
   //container.innerHTML = "";
   container.innerHTML += `
@@ -120,8 +146,8 @@ getProducts();
         </div>
         <div class="col-md-8">
           <div class="card-body py-0">
-            <h5 class="card-title text-truncate text-success">${product.name}e</h5>
-            <p class="card-text"><small class="text-muted"> x $${product.price}</small></p>
+            <h5 class="card-title text-truncate text-success">${product.name}</h5>
+            <p class="card-text"><small class="text-muted"> x $${product.price - (product.price * product.discount / 100)}</small></p>
           </div>
         </div>
     </div>
@@ -132,6 +158,58 @@ getProducts();
     `;
 }
 
+
+// agrego el elemento al html
+ export const printProductInCart = (container, product) => {
+  //Vacio el contenedor
+  //container.innerHTML = "";
+  container.innerHTML += `
+  <!-- ***************productos en carrito cart.html***************** -->
+  <div class="row border-bottom">
+    <div class="col d-flex align-items-center">
+      <img src="${product.img}" class="img-fluid rounded-start" alt="${product.name}">
+    </div>
+    <div class="col bg-info">
+      <div class="row"><p class="text-truncate" style="max-width: 150px;">${product.name}</p></div>
+      <div class="row"><p>Sold By: </p></div>
+      <div class="row"><p>Quantity: </p></div>
+    </div>
+    <div class="col">
+      <div class="row"><p>Price</p></div>
+      <div class="row"><p>$${product.price - (product.price * product.discount / 100)} <span class="text-decoration-line-through"> $${product.price}</span></p></div>
+      <div class="row"><p>Quantity: </p></div>
+    </div>
+    <div class="col">
+      <div class="row"><p>Qty</p></div>
+      <div class="row p-0">
+        <div class="row bg-success justify-content-center align-items-center  rounded-pill">
+          <div class="col text-start">
+            <i class="fa-solid fa-minus rounded-circle bg-light "></i>
+          </div>
+          <div class="col">
+            <p class="card-text text-center" data-add-to-cart="add" id=${product.id}>0</p>
+          </div>
+          <div class="col text-end">
+            <i class="fa-solid fa-plus rounded-circle bg-light"></i>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="col">
+      <div class="row"><p>Total</p></div>
+      <div class="row"><p>toal</p></div>
+      <div class="row"><p></p></div>
+    </div>
+    <div class="col">
+      <div class="row"><p>Action</p></div>
+      <div class="row"><p>Save for later</p></div>
+      <div class="row"><p>Remove</p></div>
+  </div>
+
+  <!-- ***************productos en carrito cart.html***************** -->
+    `;
+}
 
 // // *******************eliminar un producto de favoritos************************
 

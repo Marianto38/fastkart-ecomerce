@@ -120,7 +120,7 @@ getProducts();
         <p class="card-text text-truncate">${product.category}</p>
         <h5 class="card-title title fs-6">${product.name} ${product.weight}</h5>
         <p class="card-text text-truncate">${product.weight}</p>
-        <p class="card-text text-truncate">$${product.price} <span class="text-decoration-line-through"> $${product.price - (product.price * product.discount / 100)}</span></p>
+        <p class="card-text text-truncate"> $${product.price - (product.price * product.discount / 100)} <span class="text-decoration-line-through"> $${product.price}</span></p>
       </div>
       <div>
         <div class="row bg-success justify-content-center align-items-center mx-2  mb-3 py-1 rounded-pill">

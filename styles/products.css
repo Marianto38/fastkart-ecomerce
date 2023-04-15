@@ -164,6 +164,23 @@ padding-left: 0;
   z-index: 100;
 }
 
+/* ****hover en carrito********* */
+.dropdown-hover:hover .dropdown-toggle {
+  display: none;
+}
+.dropdown-hover:hover .dropdown-menu {
+  display: block;
+  right: 10%;
+  top: 100%;
+}
+
+.link-success {
+  color:  #0da487 !important;
+  text-decoration-color:  #0da487 !important;
+}
+
+
+
 /* ******************maedia query******************** */
 @media (max-width: 600px) {
 .navbar-dark .navbar-brand {

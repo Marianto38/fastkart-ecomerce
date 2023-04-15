@@ -4,10 +4,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="stylesheet" href="../styles/products.css">
+  <title>Document</title>
 </head>
 <body>
   <header class="sticky-top">
@@ -59,7 +61,7 @@
                   id="mySearch"
                   name="q"
                   placeholder="I'm searching for..." />
-                <button><i class="fas fa-search vector-search"></i></button>
+                <button type="submit"><i class="fas fa-search vector-search"></i></button>
               </div>
             </form>
           </li>
@@ -67,11 +69,33 @@
         <div class="justify-content-end text-center">
           <a class="navbar-brand fs-5 px-3 text-center m-0 border-end" href="#"><i class="fa-solid fa-phone-volume"></i></a>
           <a class="navbar-brand fs-5 px-3 text-center m-0 border-end" href="./favorites.html"><i class="fa-solid fa-heart"></i></a>
-          <button type="button" class="btn btn-transparent" data-bs-toggle="popover" data-bs-content="Este es un popover de Bootstrap"><i class="fa-solid fa-cart-shopping"></i></button>
+          <div class="btn-group dropdown-hover">
+            <button type="button" class="btn btn-transparent dropdown-toggle-invisible" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+            <ul class="dropdown-menu"   id="a" >
+                <!-- ************aqui se renderiza los productos en cart dropdown*********** -->
+              <li class=" container-cart-dropdown" id="b">
+
+              </li>
+              <li><p class="ps-3 m-2"> Total: </p></li>
+              <li>
+                <div class="row justify-content-between">
+                  <div class="col ms-3">  <a href="./cart.html" class="btn btn-outline-success"> View Cart</a></div>
+                  <div class="col pe-3 me-3 d-flex justify-content-end"> <a href="./cart.html" class="btn btn-success"> View Cart</a></div>
+                </div>
+              </li>
+            </ul>
+
+          </div>
+
+
+
           <a class="navbar-brand fs-5 px-3 text-center m-0" href="#"><i class="fa-regular fa-user"></i></a>
         </div>
       </nav>
     </div>
+
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container container-fluid px-0">
@@ -89,7 +113,7 @@
             <li><a class="dropdown-item" href="#">Separated link</a></li> -->
           </ul>
         </div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler dropdown-toggle-invisible" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarScroll">
@@ -169,6 +193,7 @@
         </div>
       </div>
     </nav>
+  </header>
 
     <nav class="container navbar navbar-light bg-light">
       <div class="container-fluid">
@@ -183,7 +208,7 @@
     </nav>
   </header>
 
-  <div class="container d-flex justify-content-center">
+  <div class="container">
         <div class="row row row-cols-1 row-cols-md-4 g-3 container-products-favorites">
 
           <!-- ***************product from product.js***************** -->
@@ -193,17 +218,14 @@
 
 
 
-   <!-- <script src="../scripts/script.js" type="module"></script> -->
-  <script src="../scripts/products.js" type="module"></script>
+
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
-  <script src="../scripts/product.js" type="module"></script>
   <script src="../scripts/favorites.js" type="module"></script>
+  <script src="../scripts/products.js" type="module"></script>
+  <script src="../scripts/product.js" type="module"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
   <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-  <script src='https://cdn.jsdelivr.net/gsap/1.19.1/TweenMax.min.js'></script><script  src="./script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script> -->
 
 </body>
 </html>

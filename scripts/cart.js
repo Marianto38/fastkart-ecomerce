@@ -1,109 +1,23 @@
-import { url, printProduct  } from "./products.js";
-export const urlShopping = "http://localhost:3000/shopping"
-const containerCartDropdown = document.querySelector('.container-cart-dropdown')
-const containerShowProductsInCart = document.querySelector('.container-products-in-cart')
-
 console.log("conectado a cart.js")
-// const containerCartDropdown = document.querySelector('.container-cart-dropdown')
-// console.log(containerCartDropdown);
+import { urlFavorites } from "./favorites.js";
+import { getProductsFromUrl  } from "./products.js";
 
- //escuchar el id en el local
- const productId = JSON.parse(localStorage.getItem("productToCart")) || 0;
-console.log(productId)
-let productFromLs = {}
-
-// función para obtener un objeto por id
-async function obtenerObjetoPorId(id) {
-  try {
-    const response = await axios.get(`${url}/${id}`);
-    productFromLs = response.data;
-    console.log(productFromLs)
-    for (const key in productFromLs) {
-      if (productFromLs.hasOwnProperty.call(productFromLs, key)) {
-        const productNew =
-          {
-            "id": `${productFromLs.id}`,
-            "name": `${productFromLs.name}`,
-            "weight": `${productFromLs.weight}`,
-            "price": `${productFromLs.price}`,
-            "discount": `${productFromLs.discount}`,
-            "category": `${productFromLs.category}`,
-            "img": `${productFromLs.img}`
-          }
-          async function getProductos() {
-            try {
-              const response = await axios.get(urlShopping);
-              const data = response.data;
-              for (const key in data) {
-                if (data.hasOwnProperty.call(data, key)) {
-                  const element = data[key];
-                  console.log(element.id)
-                  console.log(typeof(productNew.id))
-                  if (element.id == Number(productNew.id)) {
-                      console.log(`El producto con id ${productNew.id} ya existe en el array`);
-                    } else {
-                      enviarObjeto(productNew)
-                      console.log(`El producto con id ${productNew.id} no existe en el array`);
-                    }
-                }
-              }
-              // return data;
-            } catch (error) {
-              console.error(error);
-            }
-          }
-
-          getProductos();
-
-
-          async function enviarObjeto(objeto) {
-            try {
-              const response = await axios.post(urlShopping, objeto);
-              return response.data;
-            } catch (error) {
-              console.error(error);
-            }
-          }
-
-
-      }
-    }
-  } catch (error) {
-    console.error(error);
-  }
-}
-obtenerObjetoPorId(productId)
+export const urlShopping = "http://localhost:3000/shopping"
+export const urlCoupon = "http://localhost:3000/coupons"
+export const containerCartDropdown = document.querySelector('.container-cart-dropdown')
+const containerShowProductsInCart = document.querySelector('.container-products-in-cart')
+const containerSectionSubtotal = document.querySelector('.container-section-subtotal')
+const btnToSum = document.querySelector('.btn-sum')
+const btnToSubtrac = document.querySelector('.btn-subtrac')
+let  itemId = ""
+let axiosInstance = ""
 
 
 
-  // *********************Pintar cards de productos ********************************
+// *******************muestro los productos en el carrito al hacer click en barra***********************
 
-  export const getProducts = async () => {
-    try {
-      const response = await axios.get(urlShopping);
-      const data = response.data;
-      console.log("data del getProducts en linea 85 del cart", data);
-
-      const products = [];
-
-      // recorro el array de productos entregado por el fetch y agrego cada producto al array products
-      for (const product of Object.values(data)) {
-        console.log("un producto", product);
-        products.push(product);
-      }
-
-      return products; // retorno el array de productos
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
-  // función que se ejecutará después de que se resuelva la promesa de getProducts
-  const printProductsInDropdown = async () => {
-    // para utilizar los productos fuera de la función, asigno el resultado de getProducts a una variable
-    const products = await getProducts();
-
-    // recorro el array de productos y ejecuto la función para cada producto
+ export const printProductsInDropdown = async () => {
+    const products = await getProductsFromUrl(urlShopping);
     products.forEach((product) => {
       printProductInDropdown(containerCartDropdown, product);
     });
@@ -111,131 +25,301 @@ obtenerObjetoPorId(productId)
     console.log(products);
   };
 
+  document.addEventListener('DOMContentLoaded', async () => {
+    await printProductsInDropdown();
+  });
 
-  // llamo a la función printProductsInDropdown para imprimir los productos
-  printProductsInDropdown();
 
   // *******************mostrar los productos en cart.html**************************
 
     const printProductsInCartHtml = async () => {
-      const products = await getProducts();
+      const products = await getProductsFromUrl(urlShopping);
       products.forEach((product) => {
         printProductInCart(containerShowProductsInCart, product);
+        calculateSubtotal(product)
+
       });
+      // console.log(subtotal);
+      printSectionSubtotal(containerSectionSubtotal, subtotal)
+      // calculatediscountByCoupon(subtotal)
     };
 
-
-    // llamo a la función printProductsInCartHtml para imprimir los productos
-    printProductsInCartHtml();
-
-
+    document.addEventListener('DOMContentLoaded', async () => {
+      await printProductsInCartHtml();
+     });
 
 
+// *************************función para calcular el subtotal en el carrito************************
 
- // agrego el elemento al html
+let subtotal = 0;
+    const calculateSubtotal = (product) => {
+      const totalItem = product.quantity * product.price;
+      subtotal += totalItem;
+    }
+
+
+
+//  *********************muestro los productos al dropdown en la barra de navegacion*********************
  export const printProductInDropdown = (container, product) => {
-  //Vacio el contenedor
-  //container.innerHTML = "";
   container.innerHTML += `
-  <!-- ***************cards de producto***************** -->
-  <div class="dropdown-item" href="#"><div class="card mb-0" style="max-width: 400px;">
-    <div class="row g-0 pt-2">
-      <div class="d-flex justify-content-end mb-0 pe-2" ><i class="fa-solid fa-xmark"  data-delete="delete-of-cart" id=${product.id} style="color: #000000;"></i></div>
-        <div class="col-md-4">
-          <img src="${product.img}" class="img-fluid rounded-start" alt="${product.name}">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body py-0">
-            <h5 class="card-title text-truncate text-success">${product.name}</h5>
-            <p class="card-text"><small class="text-muted"> x $${product.price - (product.price * product.discount / 100)}</small></p>
+  <div class="dropdown-item">
+    <div class="card mb-0" style="max-width: 400px;">
+      <div class="row g-0 pt-2">
+        <div class="d-flex justify-content-end mb-0 pe-2" ><i class="fa-solid fa-xmark"  data-delete="delete-of-cart" id=${product.id} style="color: #000000;"></i></div>
+          <div class="col-md-4">
+            <img src="${product.img}" class="img-fluid rounded-start" alt="${product.name}">
           </div>
-        </div>
-    </div>
-  </div>
-</div>
-
-  <!-- ***************cards de producto***************** -->
-    `;
-}
-
-
-// agrego el elemento al html
- export const printProductInCart = (container, product) => {
-  //Vacio el contenedor
-  //container.innerHTML = "";
-  container.innerHTML += `
-  <!-- ***************productos en carrito cart.html***************** -->
-  <div class="row border-bottom">
-    <div class="col d-flex align-items-center">
-      <img src="${product.img}" class="img-fluid rounded-start" alt="${product.name}">
-    </div>
-    <div class="col bg-info">
-      <div class="row"><p class="text-truncate" style="max-width: 150px;">${product.name}</p></div>
-      <div class="row"><p>Sold By: </p></div>
-      <div class="row"><p>Quantity: </p></div>
-    </div>
-    <div class="col">
-      <div class="row"><p>Price</p></div>
-      <div class="row"><p>$${product.price - (product.price * product.discount / 100)} <span class="text-decoration-line-through"> $${product.price}</span></p></div>
-      <div class="row"><p>Quantity: </p></div>
-    </div>
-    <div class="col">
-      <div class="row"><p>Qty</p></div>
-      <div class="row p-0">
-        <div class="row bg-success justify-content-center align-items-center  rounded-pill">
-          <div class="col text-start">
-            <i class="fa-solid fa-minus rounded-circle bg-light "></i>
+          <div class="col-md-8">
+            <div class="card-body py-0">
+              <h5 class="card-title text-truncate text-success">${product.name}</h5>
+              <p class="card-text"><small class="text-muted"> x $${product.price - (product.price * product.discount / 100)}</small></p>
+            </div>
           </div>
-          <div class="col">
-            <p class="card-text text-center" data-add-to-cart="add" id=${product.id}>0</p>
-          </div>
-          <div class="col text-end">
-            <i class="fa-solid fa-plus rounded-circle bg-light"></i>
-          </div>
-        </div>
-
       </div>
     </div>
-    <div class="col">
-      <div class="row"><p>Total</p></div>
-      <div class="row"><p>toal</p></div>
-      <div class="row"><p></p></div>
-    </div>
-    <div class="col">
-      <div class="row"><p>Action</p></div>
-      <div class="row"><p>Save for later</p></div>
-      <div class="row"><p>Remove</p></div>
   </div>
-
-  <!-- ***************productos en carrito cart.html***************** -->
     `;
 }
 
-// // *******************eliminar un producto de favoritos************************
+
+//  *********************muestro los productos en el cart.html*********************
+ export const printProductInCart = (container, product) => {
+    container.innerHTML += `
+    <div class="row border-bottom">
+      <div class="col d-flex align-items-center">
+        <img src="${product.img}" class="img-fluid rounded-start" alt="${product.name}">
+      </div>
+      <div class="col bg-info">
+        <div class="row"><p class="text-truncate" style="max-width: 150px;">${product.name}</p></div>
+        <div class="row"><p>Sold By: </p></div>
+        <div class="row"><p>Quantity: </p></div>
+      </div>
+      <div class="col">
+        <div class="row"><p>Price</p></div>
+        <div class="row"><p>$${product.price - (product.price * product.discount / 100)} <span class="text-decoration-line-through"> $${product.price}</span></p></div>
+        <div class="row"><p>Quantity: </p></div>
+      </div>
+      <div class="col">
+        <div class="row"><p>Qty</p></div>
+        <div class="row p-0">
+          <div class="row bg-success justify-content-center align-items-center  rounded-pill">
+            <div class="col text-start" id=${product.id} data-item="btn-subtrac">
+              <i class="fa-solid fa-minus rounded-circle bg-light" id=${product.id} data-item="btn-subtrac" style="cursor: pointer;"></i>
+            </div>
+            <div class="col">
+              <p class="card-text text-center" data-add-to-cart="add" id=${product.id}>${product.quantity}</p>
+            </div>
+            <div class="col text-end" id=${product.id} data-item="btn-sum">
+              <i class="fa-solid fa-plus rounded-circle bg-light" id=${product.id} data-item="btn-sum" style="cursor: pointer;"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="row"><p>Total</p></div>
+        <div class="row"><p>${product.quantity * product.price}</p></div>
+        <div class="row"><p></p></div>
+      </div>
+      <div class="col">
+        <div class="row"><p>Action</p></div>
+        <div class="row" data-favorite="favorite" id=${product.id}><a href="#" class="link-success" data-favorite="favorite" id=${product.id}>Save for later</a></div>
+        <div class="row" data-delete="delete-of-cart" id=${product.id}><a href="#" class="link-danger" data-delete="delete-of-cart" id=${product.id}>Remove</a></div>
+      </div>
+    </div>
+    `;
+}
+
+// ********************************imprimir seccion de subtotales en cart.html**********************************
+export const printSectionSubtotal = (container, subTotal) => {
+  //Vacio el contenedor
+  //container.innerHTML = "";
+  container.innerHTML += `
+      <div class="row justify-content-between">
+        <div class="col d-flex justify-content-between">
+          <p>Subtotal</p>
+          <p>$${subTotal}</p>
+        </div>
+      </div>
+
+
+      <div class="row justify-content-between">
+        <div class="col d-flex justify-content-between">
+          <p>Coupon Discount</p>
+          <p>(-) 0.00</p>
+        </div>
+      </div>
+
+      <div class="row justify-content-between">
+        <div class="col d-flex justify-content-between">
+          <p>Shipping</p>
+          <p>$</p>
+        </div>
+      </div>
+
+      <div class="row justify-content-between">
+        <div class="col d-flex justify-content-between">
+          <p>TOTAL USD</p>
+          <p>$</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <a href="../pages/formConfirmOrder.html" type="button" class="btn btn-danger">Proces to Checkout</a>
+      </div>
+
+      <div class="row">
+        <button type="button" class="btn btn-light"><i class="fa-solid fa-arrow-left" style="color: #000000;"></i> <span> Return to shipping</span></button>
+      </div>
+
+  `
+}
+
+  // ******************Función del descuento en sección cart.html*****************
+
+
+// let discountByCoupon = 0;
+
+// const formDiscount = document.getElementById('form-discount');
+// formDiscount.addEventListener('submit', (event) => {
+//   event.preventDefault();
+//   const codeDiscount = event.target.discount;
+//   validateCoupon(codeDiscount);
+// });
+
+// export const validateCoupon = async (codeDiscount) => {
+//   const coupons = await getProductsFromUrl(urlCoupon);
+//   const couponFinded = coupons.find((coupon) => coupon.code === codeDiscount.value);
+//   if (couponFinded) {
+//     alert("cupon agregado")
+//     discountByCoupon = couponFinded.discount
+//     console.log(discountByCoupon);
+//     const calculatediscountByCoupon = (subTotal) => {
+//       const discountValue = subTotal * (couponFinded.discount / 100);
+//       console.log(discountValue);
+//     }
+//     calculatediscountByCoupon(5000)
+//   } else {
+//     alert("cupon no encontrado")
+//   }
+// }
+
+// console.log(discountByCoupon);
+
+let discountByCoupon = 0;
+document.addEventListener('DOMContentLoaded', () => {
+
+  const formDiscount = document.getElementById('form-discount');
+  formDiscount.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const codeDiscount = event.target.discount;
+    validateCoupon(codeDiscount);
+  });
+
+  const validateCoupon = async (codeDiscount) => {
+    const coupons = await getProductsFromUrl(urlCoupon);
+    const couponFinded = coupons.find((coupon) => coupon.code === codeDiscount.value);
+    if (couponFinded) {
+      alert("cupon agregado")
+      discountByCoupon = couponFinded.discount
+      console.log(discountByCoupon);
+      const calculatediscountByCoupon = (subTotal) => {
+        const discountValue = subTotal * (couponFinded.discount / 100);
+        console.log(discountValue);
+      }
+      calculatediscountByCoupon(5000)
+    } else {
+      alert("cupon no encontrado")
+    }
+  }
+
+  console.log(discountByCoupon);
+});
+
+
+
+
+// // *******************eliminar un producto de cart************************
 
 document.addEventListener("click", (event) => {
- // event.preventDefault
-  console.log(event.target);
-// //indico el atributo donde quiero escuchar el click
+   event.preventDefault
+  // //indico el atributo donde quiero escuchar el click
   const cartItemId = event.target.getAttribute("id");
   const dataDeleteCartItem = event.target.getAttribute("data-delete")
-  console.log("datadelete", dataDeleteCartItem)
- if (dataDeleteCartItem === "delete-of-cart") {
-   console.log("voy a borrar", cartItemId)
+  // console.log("datadelete", dataDeleteCartItem)
+  if (dataDeleteCartItem === "delete-of-cart") {
+      console.log("voy a borrar", cartItemId)
 
-// Crear una instancia de Axios
-const axiosInstance = axios.create({
-  baseURL: 'http://localhost:3000',
+      // Crear una instancia de Axios
+      axiosInstance = axios.create({
+        baseURL: 'http://localhost:3000',
+      });
+      const deleteData = async (id) => {
+        try {
+          const response = await axiosInstance.delete(`/shopping/${id}`);
+          console.log(response.data);
+        } catch (error) {
+          console.error(error);
+        }
+      }
+      deleteData(Number(cartItemId));
+      JSON.parse(localStorage.removeItem("productToCart"))
+  }
 });
 
-async function deleteData(id) {
+
+// ***************************sumar o restar cantidades de items**************************
+
+
+document.addEventListener("click", (event) => {
+  event.preventDefault
+   itemId = event.target.getAttribute("id");
+  const dataItem = event.target.getAttribute("data-item")
+  // console.log("DATA DEL ITEM", dataItem)
+  if (dataItem === "btn-subtrac") {
+    console.log("voy a restar")
+    substracItem();
+  }
+  else if (dataItem === "btn-sum") {
+    console.log("voy a sumar")
+    sumItem()
+  }
+});
+
+// ***************************funcion para editar el objeto json shopping****************
+const editQuantity = async (id, newQty) => {
   try {
-    const response = await axiosInstance.delete(`/shopping/${id}`);
-    console.log(response.data); // Imprimir la respuesta del servidor en la consola
+    const response = await axios.patch(`${urlShopping}/${id}`, { quantity: newQty });
+    console.log(response.data);
+    return response.data;
   } catch (error) {
-    console.error(error); // Manejar cualquier error que ocurra durante la solicitud
+    console.error(error);
   }
 }
-deleteData(Number(cartItemId))
-}
-});
+
+// *********************** funcion para restar un item****************************
+const substracItem = async () => {
+  // para utilizar los productos fuera de la función, asigno el resultado de getProductsFromUrl a una variable
+  const product = await axios.get(`${urlShopping}/${itemId}`);
+  let newQuantity = product.data.quantity
+  // const products = await getProductsFromUrl();
+  if (product.data.quantity > 0) {
+    newQuantity = newQuantity = newQuantity - 1
+    console.log(newQuantity);
+  }
+  editQuantity(itemId, newQuantity)
+};
+
+// *********************** funcion para sumar un item****************************
+const sumItem = async () => {
+  // para utilizar los productos fuera de la función, asigno el resultado de getProductsFromUrl a una variable
+  const product = await axios.get(`${urlShopping}/${itemId}`);
+  let newQuantity = product.data.quantity
+  // const products = await getProductsFromUrl();
+  if (product.data.quantity >= 0) {
+    newQuantity = newQuantity = newQuantity + 1
+    console.log(newQuantity);
+  }
+  editQuantity(itemId, newQuantity)
+};
+
+// *********************** funcion para calcular el total de cada item del carrito****************************

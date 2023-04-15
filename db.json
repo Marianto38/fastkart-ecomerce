@@ -7,7 +7,8 @@
       "price": "500",
       "discount": "15",
       "category": "vegetables & fruits",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU"
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU",
+      "quantity": 0
     },
     {
       "id": "2",
@@ -16,7 +17,8 @@
       "price": "700",
       "discount": "10",
       "category": "vegetables & fruits",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcMBz1Z5lh5Asw6Ovjy3IZYFPUjsGJd7eL6Q&usqp=CAU"
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU",
+      "quantity": 0
     },
     {
       "id": "3",
@@ -25,7 +27,8 @@
       "price": "250",
       "discount": "5",
       "category": "vegetables & fruits",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMFpY1YbYdLZgQRJZ_1FWt8Womt0PQwRcRog&usqp=CAU"
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU",
+      "quantity": 0
     },
     {
       "id": "4",
@@ -34,7 +37,8 @@
       "price": "300",
       "discount": "0",
       "category": "vegetables & fruits",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn3qfljsW5AJAON5JV5j_Ylw5yDr0ETUzR6Q&usqp=CAU"
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU",
+      "quantity": 0
     },
     {
       "id": "5",
@@ -43,7 +47,8 @@
       "price": "150",
       "discount": "10",
       "category": "vegetables & fruits",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5D3qNl4Q4U6ckRg6yBn6yKj0rA84oHTvRvg&usqp=CAU"
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU",
+      "quantity": 0
     },
     {
       "id": "6",
@@ -52,7 +57,8 @@
       "price": "400",
       "discount": "0",
       "category": "vegetables & fruits",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-8jKQrZZIa_DiRzZnE8N9cKjYPdkHvj-vvA&usqp=CAU"
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU",
+      "quantity": 0
     },
     {
       "id": "7",
@@ -61,7 +67,8 @@
       "price": "600",
       "discount": "20",
       "category": "vegetables & fruits",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3H58FYk9bzz"
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU",
+      "quantity": 0
     }
   ],
   "favorites": [
@@ -72,46 +79,8 @@
       "price": "500",
       "discount": "15",
       "category": "vegetables & fruits",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU"
-    },
-    {
-      "name": "Tomate id 4",
-      "weight": "500g",
-      "price": 500,
-      "discount": "",
-      "category": "vegetables",
-      "stock": 5,
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU",
-      "id": 4
-    },
-    {
-      "name": "Tomate id 5",
-      "weight": "500g",
-      "price": 500,
-      "discount": "",
-      "category": "vegetables",
-      "stock": 5,
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU",
-      "id": 5
-    },
-    {
-      "name": "Tomate id 6",
-      "weight": "500g",
-      "price": 500,
-      "discount": "",
-      "category": "vegetables",
-      "stock": 5,
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU",
-      "id": 6
-    },
-    {
-      "id": "2",
-      "name": "Manzana",
-      "weight": "1kg",
-      "price": "700",
-      "discount": "10",
-      "category": "vegetables & fruits",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcMBz1Z5lh5Asw6Ovjy3IZYFPUjsGJd7eL6Q&usqp=CAU"
+      "quantity": 0
     }
   ],
   "users": [
@@ -119,22 +88,39 @@
   ],
   "shopping": [
     {
-      "id": "2",
-      "name": "Tomate id 2 aaaaaa aaaaa aaaaaa aaaaa aaaaa aaaaa aaaaaa aaaaaa aaaaa aaaaaaaa aaaaaaaaaa",
+      "id": "7",
+      "name": "Mango",
+      "weight": "1kg",
+      "price": "600",
+      "discount": "20",
+      "category": "vegetables & fruits",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU",
+      "quantity": 0
+    },
+    {
+      "id": "1",
+      "name": "Tomate",
       "weight": "500g",
       "price": "500",
       "discount": "15",
-      "category": "fruits",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU"
-    },
-    {
-      "id": "3",
-      "name": "Lechuga",
-      "weight": "500g",
-      "price": "250",
-      "discount": "5",
       "category": "vegetables & fruits",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMFpY1YbYdLZgQRJZ_1FWt8Womt0PQwRcRog&usqp=CAU"
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU",
+      "quantity": 0
+    }
+  ],
+  "coupons": [
+    {
+      "id": 1,
+      "code": "LXGV5235",
+      "discount": 10
+    }
+  ],
+  "buys": [
+    {
+      "name": "maria",
+      "address": "CRA 61 A N 47 58",
+      "phone": "3173982019",
+      "id": 1
     }
   ]
 }

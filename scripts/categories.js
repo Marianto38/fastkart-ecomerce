@@ -1,5 +1,5 @@
 const url = "http://localhost:3000/products"
-import { printProduct, getProducts, productContainer } from "./products.js";
+import { printProduct, productContainer } from "./products.js";
 // const containerCategories = document.getElementById('container-categories')
 // console.log(containerCategories)
 

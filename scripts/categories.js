@@ -1,81 +1,56 @@
 const url = "http://localhost:3000/products"
-import { printProduct, productContainer } from "./products.js";
-// const containerCategories = document.getElementById('container-categories')
-// console.log(containerCategories)
-
-// const categories = async () => {
-//   const response = await fetch(url);
-//   const data = await response.json();
-//   console.log("data en categori", data);
-
-//   //Vacio el contenedor
-//   containerCategories.innerHTML = "";
-
-//   data.forEach(element => {
-//   containerCategories.innerHTML += `
-//   <li><a class="dropdown-item" id="${element.category}" href="#">${element.category}</a></li>
-//   `;
-
-//   });
-//   const category ="all";
-//   const itemCategories = document.getElementById('category-filter')
-//   console.log("escuchando item categories", itemCategories)
-//   document.addEventListener("click", (event) => {
-//     console.log(event.target)
-//     const categoryFilter = event.target.id
-//     console.log(categoryFilter)
-//       if (category == "all") {
-//         console.log("todas");
-//         getProducts();
-
-
-//       } else {
-//         const productContainer = document.querySelector('.container-products');
-//         console.log("voy a mostrar la categoria", categoryFilter)
-//         const productByCategory = data.filter(object => object.category === categoryFilter);
-//         console.log(productByCategory)
-//         console.log(productByCategory[0].name)
-//         printProduct(productContainer, productByCategory[key])
-//       }
-//   });
-// }
-// categories();
-
+import { printProduct, productContainer, urlProducts, getProductsFromUrl} from "./products.js";
 
 const containerCategories = document.getElementById('container-categories')
 console.log(containerCategories)
+const categories = ["all"]
 
-const categories = async () => {
-  const response = await fetch(url);
-  const data = await response.json();
-  console.log("data en categori", data);
+const categoriesFromProducts = async () => {
 
-  //Vacio el contenedor
-  // containerCategories.innerHTML = "";
 
-  data.forEach(element => {
-  containerCategories.innerHTML += `
-  <li><a class="dropdown-item" id="${element.category}" href="#">${element.category}</a></li>
+
+  const products = await getProductsFromUrl(urlProducts);
+  products.forEach((product) => {
+    if (!categories.includes(product.category)) {
+      categories.push(product.category);
+    }
+  });
+  console.log("21", categories)
+  categories.forEach(category => {
+    containerCategories.innerHTML += `
+  <li class="d-flex align-items-center"><a class="dropdown-item" id="${category}" href="#">
+  <img src="${category}" alt="" style="max-width:20px";><apan class="ps-2"> ${category}</apan> </a></li>
   `;
 
   });
+
+
   const itemCategories = document.getElementById('category-filter')
   console.log("escuchando item categories", itemCategories)
-  let categoryFilter = "all"
-  document.addEventListener("click", (event) => {
+  let categoryFilter = ['all']
+  containerCategories.addEventListener("click", (event) => {
+    event.preventDefault()
     console.log(event.target)
     categoryFilter = event.target.id
     console.log(categoryFilter)
+    if (categoryFilter == "all") {
+      productContainer.innerHTML = "";
+        products.forEach((product) => {
+          printProduct(productContainer, product);
+        });
+    } else {
+      console.log("voy a mostrar la categoria", categoryFilter)
+      const filteredProducts = products.filter((product) => product.category == categoryFilter);
+      console.log(filteredProducts)
 
-        console.log("voy a mostrar la categoria", categoryFilter)
-        for (const key in data) {
-          const productByCategory = data.filter(object => object.category === categoryFilter);
-          console.log(productByCategory)
-          console.log("79", productByCategory[key].name)
-            const productFiltered = productByCategory[key];
-            productContainer.innerHTML = "";
-            printProduct(productContainer, productFiltered);
-      }
+      productContainer.innerHTML = "";
+      filteredProducts.forEach(product => {
+        printProduct(productContainer, product);
+      });
+
+
+    }
+
   });
-}
-//categories();
+ }
+categoriesFromProducts();

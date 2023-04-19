@@ -1,6 +1,9 @@
 console.log("conectado a cart.js")
-import { urlFavorites } from "./favorites.js";
+// import { urlFavorites } from "./favorites.js";
 import { getProductsFromUrl  } from "./products.js";
+const urlBuys =  "http://localhost:3000/buys"
+// import { urlBuys  } from "./formConfirmOrder.js";
+
 
 export const urlShopping = "http://localhost:3000/shopping"
 export const urlCoupon = "http://localhost:3000/coupons"
@@ -11,6 +14,7 @@ const btnToSum = document.querySelector('.btn-sum')
 const btnToSubtrac = document.querySelector('.btn-subtrac')
 let  itemId = ""
 let axiosInstance = ""
+
 
 
 
@@ -40,7 +44,9 @@ let axiosInstance = ""
 
       });
       // console.log(subtotal);
+      applyCoupon(subtotal);
       printSectionSubtotal(containerSectionSubtotal, subtotal)
+      // alert(total);
       // calculatediscountByCoupon(subtotal)
     };
 
@@ -56,6 +62,19 @@ let subtotal = 0;
       const totalItem = product.quantity * product.price;
       subtotal += totalItem;
     }
+
+
+    // ********calculos************
+// let producto = []
+//  export const calculos = async () => {
+//   const products = await getProductsFromUrl(urlShopping);
+//   products.forEach((product) => {
+//     producto.push(product)
+//     console.log("calculo", producto);
+//   });
+//   calculos();
+
+// };
 
 
 
@@ -86,7 +105,7 @@ let subtotal = 0;
  export const printProductInCart = (container, product) => {
     container.innerHTML += `
     <div class="row border-bottom">
-      <div class="col d-flex align-items-center">
+      <div class="col d-none d-md-block d-flex align-items-center">
         <img src="${product.img}" class="img-fluid rounded-start" alt="${product.name}">
       </div>
       <div class="col bg-info">
@@ -141,38 +160,23 @@ export const printSectionSubtotal = (container, subTotal) => {
         </div>
       </div>
 
+ `
+}
 
+
+
+const printSectionCouponAplied = async (container, discountAplied) => {
+  alert("soy container", container)
+  //Vacio el contenedor
+  container.innerHTML = "";
+  container.innerHTML += `
       <div class="row justify-content-between">
         <div class="col d-flex justify-content-between">
           <p>Coupon Discount</p>
-          <p>(-) 0.00</p>
+          <p>(-) ${discountAplied}</p>
         </div>
-      </div>
-
-      <div class="row justify-content-between">
-        <div class="col d-flex justify-content-between">
-          <p>Shipping</p>
-          <p>$</p>
-        </div>
-      </div>
-
-      <div class="row justify-content-between">
-        <div class="col d-flex justify-content-between">
-          <p>TOTAL USD</p>
-          <p>$</p>
-        </div>
-      </div>
-
-      <div class="row">
-        <a href="../pages/formConfirmOrder.html" type="button" class="btn btn-danger">Proces to Checkout</a>
-      </div>
-
-      <div class="row">
-        <button type="button" class="btn btn-light"><i class="fa-solid fa-arrow-left" style="color: #000000;"></i> <span> Return to shipping</span></button>
-      </div>
-
-  `
-}
+      </div>`
+};
 
   // ******************Función del descuento en sección cart.html*****************
 
@@ -205,37 +209,88 @@ export const printSectionSubtotal = (container, subTotal) => {
 
 // console.log(discountByCoupon);
 
-let discountByCoupon = 0;
-document.addEventListener('DOMContentLoaded', () => {
+// let discountByCoupon = 0;
+// document.addEventListener('DOMContentLoaded', () => {
+
+//   const formDiscount = document.getElementById('form-discount');
+//   formDiscount.addEventListener('submit', (event) => {
+//     event.preventDefault();
+//     const codeDiscount = event.target.discount;
+//     validateCoupon(codeDiscount);
+//   });
+
+//   const validateCoupon = async (codeDiscount) => {
+//     const coupons = await getProductsFromUrl(urlCoupon);
+//     const couponFinded = coupons.find((coupon) => coupon.code === codeDiscount.value);
+//     if (couponFinded) {
+//       alert("cupon agregado")
+//       discountByCoupon = couponFinded.discount
+//       console.log(couponFinded);
+//       await axios.post(urlBuys, {couponFinded});
+
+//       calculatediscountByCoupon(subtotal)
+//     } else {
+//       alert("cupon no encontrado")
+//       formDiscount.reset()
+//     }
+//   }
+
+//   console.log(discountByCoupon);
+// });
+
+
+const applyCoupon = async (subtotal) => {
+
+  let discountByCoupon = 0;
 
   const formDiscount = document.getElementById('form-discount');
-  formDiscount.addEventListener('submit', (event) => {
+  formDiscount.addEventListener('submit', async (event) => {
     event.preventDefault();
     const codeDiscount = event.target.discount;
-    validateCoupon(codeDiscount);
-  });
-
-  const validateCoupon = async (codeDiscount) => {
     const coupons = await getProductsFromUrl(urlCoupon);
     const couponFinded = coupons.find((coupon) => coupon.code === codeDiscount.value);
+
     if (couponFinded) {
-      alert("cupon agregado")
-      discountByCoupon = couponFinded.discount
-      console.log(discountByCoupon);
-      const calculatediscountByCoupon = (subTotal) => {
-        const discountValue = subTotal * (couponFinded.discount / 100);
-        console.log(discountValue);
-      }
-      calculatediscountByCoupon(5000)
+      const containerDiscount = document.querySelector('.container-discount')
+
+      alert("cupon agregado");
+      discountByCoupon = couponFinded.discount;
+      console.log(couponFinded);
+      alert("soy subtotal"+ subtotal + "soy descuento"+ discountByCoupon)
+      const discountAmount = (subtotal * discountByCoupon) / 100;
+alert(discountAmount)
+alert(containerDiscount)
+      printSectionCouponAplied(containerDiscount, discountAmount);
+      await axios.post(urlBuys, {couponFinded});
+
+
+      // calculateDiscountByCoupon(subtotal, discountByCoupon);
+
     } else {
-      alert("cupon no encontrado")
+      alert("cupon no encontrado");
+      formDiscount.reset();
     }
-  }
+  });
 
-  console.log(discountByCoupon);
-});
+};
 
 
+
+// const calculateDiscountByCoupon = (subtotal, discountByCoupon) => {
+//   const discountAmount = (subtotal * discountByCoupon) / 100;
+//   // const total = subtotal - discountAmount;
+//   document.addEventListener('DOMContentLoaded', async () => {
+//   printSectionCouponAplied(containerDiscount, discountAmount);
+//   });
+// alert("soy la 304", total);
+//   // return total;
+// };
+
+
+// const calculatediscountByCoupon = (subTotal) => {
+//   const id = subTotal * (couponFinded.discount / 100);
+//   console.log(discountValue);
+// }
 
 
 // // *******************eliminar un producto de cart************************

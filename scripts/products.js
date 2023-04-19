@@ -49,7 +49,7 @@ export async function obtenerObjetoPorId(id, urlToPost) {
 
   // *********************Pintar cards de productos ********************************
 
-  const printProductsInHome = async () => {
+  export const printProductsInHome = async () => {
     const products = await getProductsFromUrl(urlProducts);
     products.forEach((product) => {
       printProduct(productContainer, product);
@@ -69,7 +69,7 @@ export async function obtenerObjetoPorId(id, urlToPost) {
   <div class="col  card-product">
     <div class="card h-100">
     <i class="fa-sharp fa-solid fa-circle-xmark fs-2 close-btn"></i>
-    <div class="row justify-content-center card-links">
+    <div class="row justify-content-center card-links" id="btns-link">
       <div class="col px-3" data-product="product" id=${product.id}>
         <i class="fa-solid fa-eye"  data-product="product" id=${product.id}></i>
       </div>
@@ -83,7 +83,9 @@ export async function obtenerObjetoPorId(id, urlToPost) {
     <div class="new" >
 
     </div>
-      <img src="${product.img}" class="card-img-top" alt="...">
+    <div class="d-flex justify-content-center" >
+    <img src="${product.img}" class="" alt="..." style="max-height:150px">
+    </div>
       <div class="card-body">
         <p class="card-text text-truncate">${product.category}</p>
         <h5 class="card-title title fs-6">${product.name} ${product.weight}</h5>
@@ -111,8 +113,9 @@ export async function obtenerObjetoPorId(id, urlToPost) {
 
 
 //4. Escucho el click sobre cada product
+
 document.addEventListener("click", (event) => {
- // console.log(event.target);
+ console.log(event.target);
 //indico el atributo donde quiero escuchar el click
   const productTarget = event.target.getAttribute("data-product");
   if (productTarget === "product") {

@@ -28,7 +28,9 @@ export const printProductsInFavorites = async () => {
         <div class="new" >
 
     </div>
-      <img src="${product.img}" class="card-img-top" alt="...">
+    <div class="d-flex justify-content-center" >
+    <img src="${product.img}" class="" alt="..." style="max-height:150px">
+    </div>
       <div class="card-body">
         <p class="card-text text-truncate">${product.category}</p>
         <h5 class="card-title title fs-6">${product.name} ${product.weight}</h5>

@@ -223,23 +223,66 @@
         <p>Cart Total</p>
       </div>
 
-    <form id="form-discount">
-      <label for="">Coupon Apply</label>
-      <div class="input-group mb-3">
-        <input type="text" name="discount" class="form-control" placeholder="Enter Coupon Code Here..." aria-label="Recipient's username" aria-describedby="button-addon2">
-        <button class="btn btn-outline-secondary" type="submit">Button</button>
-      </div>
-    </form>
-    <div class="container-section-subtotal">
-           <!-- ***************subtotal from cart.js***************** -->
+      <div class="container-section-subtotal">
+        <!-- ***************subtotal from cart.js***************** -->
 
+      </div>
+
+      <form id="form-discount">
+        <label for="">Coupon Apply</label>
+        <div class="input-group mb-3">
+          <input type="text" name="discount" class="form-control" placeholder="Enter Coupon Code Here..." aria-label="Recipient's username" aria-describedby="button-addon2">
+          <button class="btn btn-outline-secondary" type="submit">Button</button>
+        </div>
+      </form>
+
+     <div class="container-discount">
+        <div class="row justify-content-between">
+          <div class="col d-flex justify-content-between">
+            <p>Coupon Discount</p>
+            <p>(-) 0.00</p>
+          </div>
+        </div>
+     </div>
+<!-- ***************discount from cart.js***************** -->
+
+
+    <div class="container-shipping">
+      <div class="row justify-content-between">
+        <div class="col d-flex justify-content-between">
+          <p>Shipping</p>
+          <p>$</p>
+        </div>
+      </div>
     </div>
-    <!-- <div class="container-discount"></div> -->
+
+    <div class="container-total">
+      <div class="row justify-content-between">
+        <div class="col d-flex justify-content-between">
+          <p>TOTAL USD</p>
+          <p>$</p>
+        </div>
+      </div>
+    </div>
+
+      <!-- Button trigger modal -->
+      <div class="row">
+        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Proces to Chekout
+        </button>
+    </div>
+
+    <div class="row">
+      <a type="button" href="./home.html" class="btn btn-light"><i class="fa-solid fa-arrow-left" style="color: #000000;"></i> <span> Return to shipping</span></a>
+    </div>
+
   </div>
-  <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Launch demo modal
-</button>
+
+
+  </section>
+
+
+
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

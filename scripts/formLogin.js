@@ -1,12 +1,13 @@
 console.log("conectado a formLogin.js");
-
+import { getProductsFromUrl  } from "./products.js";
+const urlUsers = "http://localhost:3000/users"
 const formLogin = document.getElementById('form-login');
 
 formLogin.addEventListener('submit', (event) => {
-  event.preventDefault(); // Evita el comportamiento predeterminado de enviar el formulario
+  event.preventDefault();
 
-  const formData = {}; // Objeto para almacenar los datos del formulario
-  let hasErrors = false; // Bandera para indicar si se encontraron errores
+  const userInfo = {};
+  let hasErrors = false; // validar errores en el formulario
 
   // Recorre todos los elementos del formulario
   for (let key in event.target.elements) {
@@ -14,26 +15,25 @@ formLogin.addEventListener('submit', (event) => {
     if (input.nodeName === 'INPUT') {
       // Verifica si el campo está vacío o solo contiene espacios en blanco
       if (input.value.trim().length === 0) {
-        // Muestra un mensaje de error al usuario
-        alert(`El campo "${input.name}" no puede estar vacío.`);
+       alert(`El campo "${input.name}" no puede estar vacío.`);
         hasErrors = true;
-        break; // Detiene el bucle si se encuentra un campo vacío
+        break;
       }
-      formData[input.name] = input.value; // Agrega el valor del elemento al objeto formData
+      userInfo[input.name] = input.value; // Agrega el valor del elemento al objeto userInfo
     }
   }
 
   if (!hasErrors) {
-    console.log(formData); // Imprime el objeto con los datos del formulario
-    // addObjectToArray(urlBuys, formData);
+    validateUser(userInfo);
   }
 });
 
-// const addObjectToArray = async (url, objectToAdd) => {
-//   try {
-//     const response = await axios.post(url, objectToAdd);
-//     console.log(response.data); // manejar la respuesta según sea necesario
-//   } catch (error) {
-//     console.error(error);
-//   }
-// };
+const validateUser = async (userInfo) => {
+  const users = await getProductsFromUrl(urlUsers);
+  const userFinded = users.find((user) => user.name.toLowerCase() === userInfo.Nombre.toLowerCase() && user.password === Number(userInfo.Contraseña));
+  if (userFinded) {
+    alert("Usuario Logeado")
+  } else {
+    alert("El usuario o contraseña ingresado no es correcto, Por favor digite nuevamente su información")
+  }
+}

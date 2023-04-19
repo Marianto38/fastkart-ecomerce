@@ -83,7 +83,7 @@ visibility: hidden;
 
 }
 #mySearch {
-  width: 448px;
+  width: 415px;
   height: 24px;
   font-family: "Poppins", sans-serif !important;
   font-style: normal;
@@ -135,23 +135,32 @@ li {
   color: #0da487 !important;
 }
 .bg-offer {
-  background-color: #ffff;
+  /* background-color: #ffff; */
  max-width: 80%;
  opacity: .5px;
  border-top-right-radius: 50px;
 border-bottom-right-radius: 50px;
 padding-left: 0;
+background-color: rgba(255, 255, 255, 0.5);
+box-shadow: 0 0 0px rgba(0, 0, 0, 0.8);
+backdrop-filter: blur(5px);
 
+}
+.bg-card-offer {
+   z-index: -2;
 }
 
 .img-publi-3 {
   position: absolute;
-  width: 150px;
+  width: 70%;
   bottom: 0%;
   right: 0%;
-  z-index: 0;
+  z-index: -1;
 }
-.aaa {
+.egg {
+  width: 50%;
+}
+.promotions {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -179,7 +188,16 @@ padding-left: 0;
   text-decoration-color:  #0da487 !important;
 }
 
-
+.payment-methods {
+  color: #7c7d7e;
+  font-size: 28px;
+}
+.social-link {
+  font-size: 18px;
+}
+.over {
+  overflow-y: auto;
+}
 
 /* ******************maedia query******************** */
 @media (max-width: 600px) {
@@ -189,6 +207,11 @@ padding-left: 0;
 }
 #form-search {
   display: none;
+}
+.dropdown-hover:hover .dropdown-menu {
+  display: block;
+  right: 50%;
+  top: 100%;
 }
 }
 

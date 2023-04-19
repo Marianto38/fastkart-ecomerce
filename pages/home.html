@@ -48,25 +48,27 @@
 
     <nav class=" container  navbar navbar-light bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand fs-6" href="#">FASTKART</a>
-        <div class="container-location justify-content-end">
-          <i class="fa-solid fa-location-dot bg-secondary fs-6 p-2 rounded-3"></i>
+        <a class="navbar-brand fs-6" href="#"><img src="../images/logo.png" alt="" style="width: 50%;"></a>
+        <div class="d-flex justify-content-center">
+          <div class="container-location justify-content-end">
+            <i class="fa-solid fa-location-dot bg-secondary fs-6 p-2 rounded-3"></i>
+          </div>
+          <ul class="list mb-0">
+            <li>
+              <form id="form-search">
+                <div class="container-search">
+                  <input
+                    type="search"
+                    id="mySearch"
+                    name="buscador"
+                    placeholder="I'm searching for..." />
+                  <button type="submit"><i class="fas fa-search vector-search"></i></button>
+                </div>
+              </form>
+            </li>
+          </ul>
         </div>
-        <ul class="list mb-0">
-          <li>
-             <form id="form-search">
-              <div class="container-search">
-                <input
-                  type="search"
-                  id="mySearch"
-                  name="buscador"
-                  placeholder="I'm searching for..." />
-                <button type="submit"><i class="fas fa-search vector-search"></i></button>
-              </div>
-            </form>
-          </li>
-        </ul>
-        <div class="justify-content-end text-center">
+        <div class="justify-content-end text-center ms-5">
           <a class="navbar-brand fs-5 px-3 text-center m-0 border-end" href="#"><i class="fa-solid fa-phone-volume"></i></a>
           <a class="navbar-brand fs-5 px-3 text-center m-0 border-end" href="./favorites.html"><i class="fa-solid fa-heart"></i></a>
           <div class="btn-group dropdown-hover">
@@ -88,10 +90,7 @@
             </ul>
 
           </div>
-
-
-
-          <a class="navbar-brand fs-5 px-3 text-center m-0" href="#"><i class="fa-regular fa-user"></i></a>
+          <a class="navbar-brand fs-5 px-3 text-center m-0" href="./formLogin.html"><i class="fa-regular fa-user"></i></a>
         </div>
       </nav>
     </div>
@@ -116,7 +115,7 @@
         <button class="navbar-toggler dropdown-toggle-invisible" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarScroll">
+        <div class="collapse navbar-collapse fs-5" id="navbarScroll">
           <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll justify-content-center tyle="--bs-scroll-height: 100px;">
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -201,9 +200,9 @@
 
   <div class="container">
       <div class="row ">
-        <div class="col-7 bg-info rounded-3 me-4">
+        <div class="col-12 col-md-7  bg-info rounded-3 me-4">
           <div class="row align-items-center">
-            <div class="col ps-5">
+            <div class="col ps-2 ps-md-5">
               <p  class="fs-5"> Exclusive offer <span class="badge rounded-pill bg-warning bg-opacity-10 text-danger">30% off</span></p>
               <h3>STAY HOME & DELIVERED YOUR</h3>
               <h3><span class="text-success fw-bold fs-1">DAILY NEEDS</span></h3>
@@ -215,7 +214,7 @@
             </div>
           </div>
         </div>
-        <div class="col-5" style="max-width: 450px;">
+        <div class="col-12 col-md-5" style="max-width: 450px;">
           <div class="row rounded-3 py-3" style="background-image: linear-gradient(rgba(249, 245, 245, 0.4),rgba(253, 252, 252, 0.4)), url(../images/bg-nut.png); background-size: cover;">
             <div class="row align-items-center">
               <div class="col ps-3 w-50">
@@ -244,24 +243,24 @@
   <section>
     <div class="container">
       <div class="row mt-4">
-        <div class="col">
+        <div class="col-12 col-md-4">
             <div class="row align-items-center ">
-              <div class="col ps-0 bg-info py-3 rounded-3" style="position: relative; height: 12rem;">
+              <div class="col ps-0 bg-info  bg-card-offer py-3 rounded-3" style="position: relative; height: 12rem;">
                 <div class=" bg-offer p-0 m-0">
                   <p class="text-danger ps-3 fs-5 mb-0">5% OFF</p>
                   <p class=" fw-bold ps-3  pt-0 mt-0 mb-0">Hot Deals on New Items</p>
                   <p class="ps-3 pt-0 mt-0">Daily Essentials Eggs & Dairy</p>
                 </div>
-                <img src="../images/eggs.png" alt="" class="img-publi-3">
+                <img src="../images/eggs.png" alt="" class="img-publi-3 egg">
                 <div class="oval"></div>
-                  <button type="button" class="aaa btn btn-success text-light pb-0">Shop Now <i class="fa-solid fa-arrow-right"></i></button>
+                  <button type="button" class="promotions btn btn-success text-light pb-0">Shop Now <i class="fa-solid fa-arrow-right"></i></button>
               </div>
             </div>
 
         </div>
-        <div class="col">
+        <div class="col-12 col-md-4">
           <div class="row g-1 rounded-3">
-              <div class="col ps-0 bg-info py-3 rounded-3" style="position: relative; height: 12rem;">
+              <div class="col ps-0 bg-info bg-card-offer py-3 rounded-3" style="position: relative; height: 12rem;">
                 <div class=" bg-offer p-0 m-0">
                   <p class="text-danger ps-3 fs-5 mb-0">5% OFF</p>
                   <p class=" fw-bold ps-3  pt-0 mt-0 mb-0">Buy More & Save More</p>
@@ -269,13 +268,13 @@
                 </div>
                 <img src="../images/fruit.png" alt="" class="img-publi-3">
                 <div class="oval"></div>
-                  <button type="button" class="aaa btn btn-danger text-light pb-0">Shop Now <i class="fa-solid fa-arrow-right"></i></button>
+                  <button type="button" class="promotions btn btn-danger text-light pb-0">Shop Now <i class="fa-solid fa-arrow-right"></i></button>
               </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col-12 col-md-4">
           <div class="row rounded-3">
-              <div class="col ps-0 bg-info py-3 rounded-3" style="position: relative; height: 12rem;">
+              <div class="col ps-0 bg-info bg-card-offer py-3 rounded-3" style="position: relative; height: 12rem;">
                 <div class=" bg-offer p-0 m-0">
                   <p class="text-danger ps-3 fs-5 mb-0">5% OFF</p>
                   <p class=" fw-bold ps-3  pt-0 mt-0 mb-0">Organic Meat Prepared</p>
@@ -283,7 +282,7 @@
                 </div>
                 <img src="../images/meet.png" alt="" class="img-publi-3">
                 <div class="oval"></div>
-                  <button type="button" class="aaa btn btn-warning text-light pb-0">Shop Now <i class="fa-solid fa-arrow-right"></i></button>
+                  <button type="button" class="promotions btn btn-warning text-light pb-0">Shop Now <i class="fa-solid fa-arrow-right"></i></button>
               </div>
           </div>
         </div>
@@ -293,12 +292,34 @@
   <hr>
 
   <section>
-    <div class="container">
+    <div class="container p-5 p-md-0">
       <div class="row">
-        <div class="col-4">
+        <div class="col-4 d-none d-md-block">
 
         </div>
-        <div class="col-8 px-0">
+        <div class="col-12 col-md-8 px-0">
+          <div class="row">
+            <h3 class="">Top Save Today</h3>
+          </div>
+          <div class="row ">
+            <div class="col-12 col-md-8">
+              <div class="row align-items-center justify-content-start ps-3">
+                <div class="col-1 bg-success" style="height: 2px; width: 10%;">
+                </div>
+                <div class="col-1">
+                  <span> <i class="fa-solid fa-seedling text-success fs-3"></i></span>
+                </div>
+                <div class="col-1 bg-success" style="height: 2px; width: 10%">
+                </div>
+              </div>
+              <p>Don't miss this opportunity at a special discount just for this week</p>
+            <div class="col-4">
+
+
+            </div>
+            </div>
+
+          </div>
           <div class="row row-cols-1 row-cols-md-3 g-0  container-products">
 
             <!-- ***************product from product.js***************** -->
@@ -310,7 +331,94 @@
     </div>
   </section>
 
-  <section>
+
+  <section class="bg-info">
+    <div class="container pt-3 px-3">
+      <div class="row">
+        <div class="col-3 ">
+          <img src="../images/logo.png" alt="" style="width: 50%;" class="mb-3">
+          <p>An online platform where users can browse a wide variety of products from different categories</p>
+          <p><i class="fa-solid fa-house-chimney"></i><span class="ps-2">1418 Riverwood Drive, CA 96052, US</span></p>
+          <p><i class="fa-solid fa-envelope"></i><span class="ps-2">support@fastkart.com</span></p>
+        </div>
+        <div class="col ">
+          <h6 class="mb-3">Categories</h6>
+          <p>Vegetables & fruits</p>
+          <p>Beverages</p>
+          <p>Frozen Foods</p>
+          <p>Biscuits & Snacks</p>
+          <p>Groceries & Staples</p>
+        </div>
+        <div class="col">
+          <h6 class="mb-3">Useful Links</h6>
+          <p>Home</p>
+          <p>Shop</p>
+          <p>About Us</p>
+          <p>Blog</p>
+          <p>Contact Us</p>
+        </div>
+        <div class="col ">
+          <h6 class="mb-3">Help Center</h6>
+          <p>Your Order</p>
+          <p>Your Account</p>
+          <p>Track Order</p>
+          <p>Your WishList</p>
+          <p>Search</p>
+          <p>FAQ</p>
+        </div>
+        <div class="col">
+          <div class="row">
+            <h6 class="mb-4">Contact Us</h6>
+            <p><i class="fa-solid fa-phone"></i><span class="ps-2">HotLine 24/7: <br > <span class="ps-4 fw-bold">+91 888 104 2340</span> </span></p>
+            <hr>
+          </div>
+          <div class="row">
+            <h6 class="mb-4">Contact Us</h6>
+            <p><i class="fa-solid fa-envelope"></i><span class="ps-2">Email Address: <br > <span class="ps-4 fw-bold">fastkart@hotmail.com</span> </span></p>
+            <hr>
+          </div>
+          <p>Download app:</p>
+          <div class="row p-0 align-items-center">
+            <div class="col-6">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx3qYW0NCqkolO0D64U6CLRz2dJqB-ALn_MQ&usqp=CAU" alt="" style="max-width: 100%;">
+            </div>
+            <div class="col-6">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5HudE2ZgEZPomI1KkhV6TeEleQjo7vBkFKw&usqp=CAU" alt="" style="max-width: 100%;">
+            </div>
+          </div>
+        </div>
+        <hr class="mt-4">
+
+      </div>
+
+      <div class="row justify-content-between pb-3">
+        <div class="col">
+          <p>©2022 Fastkart all rights reserved</p>
+        </div>
+
+        <div class="col">
+          <i class="fa-brands fa-cc-paypal payment-methods"></i>
+          <i class="fa-brands fa-cc-visa payment-methods"></i>
+          <i class="fa-brands fa-cc-mastercard payment-methods"></i>
+          <i class="fa-brands fa-stripe payment-methods"></i>
+          <i class="fa-brands fa-cc-amex payment-methods"></i>
+        </div>
+        <div class="col">
+          <span class="pe-3">Stay connected:</span>
+          <i class="fa-brands fa-facebook-f social-link"></i>
+          <i class="fa-brands fa-twitter social-link"></i>
+          <i class="fa-brands fa-instagram social-link"></i>
+          <i class="fa-brands fa-pinterest social-link"></i>
+        </div>
+      </div>
+
+<img src="https://www.flaticon.com/free-icon/fruit_2902017?term=vegetable&related_id=2902017" alt="">
+
+
+
+    </div>
+
+
 
    </section>
 

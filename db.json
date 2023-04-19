@@ -1,109 +1,219 @@
 {
   "products": [
     {
-      "id": "1",
+      "id": 1,
       "name": "Tomate",
       "weight": "500g",
       "price": "500",
       "discount": "15",
-      "category": "vegetables & fruits",
+      "category": "Vegetables & fruits",
+      "icon": "https://img.icons8.com/pastel-glyph/1x/beetroot-and-carrot-1.png",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU",
       "quantity": 0
     },
     {
-      "id": "2",
+      "id": 2,
       "name": "Manzana",
       "weight": "1kg",
       "price": "700",
       "discount": "10",
-      "category": "vegetables & fruits",
+      "category": "Vegetables & fruits",
+      "icon": "https://img.icons8.com/pastel-glyph/1x/beetroot-and-carrot-1.png",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU",
       "quantity": 0
     },
     {
-      "id": "3",
+      "id": 3,
       "name": "Lechuga",
       "weight": "500g",
       "price": "250",
       "discount": "5",
-      "category": "vegetables & fruits",
+      "category": "Vegetables & fruits",
+      "icon": "https://img.icons8.com/pastel-glyph/1x/beetroot-and-carrot-1.png",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU",
       "quantity": 0
     },
     {
-      "id": "4",
+      "id": 4,
       "name": "Papa",
       "weight": "1kg",
       "price": "300",
       "discount": "0",
-      "category": "vegetables & fruits",
+      "category": "Vegetables & fruits",
+      "icon": "https://img.icons8.com/pastel-glyph/1x/beetroot-and-carrot-1.png",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU",
       "quantity": 0
     },
     {
-      "id": "5",
+      "id": 5,
       "name": "Cebolla",
       "weight": "500g",
       "price": "150",
       "discount": "10",
-      "category": "vegetables & fruits",
+      "category": "Vegetables & fruits",
+      "icon": "https://img.icons8.com/pastel-glyph/1x/beetroot-and-carrot-1.png",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU",
       "quantity": 0
     },
     {
-      "id": "6",
+      "id": 6,
       "name": "Plátano",
       "weight": "1kg",
       "price": "400",
       "discount": "0",
-      "category": "vegetables & fruits",
+      "category": "Vegetables & fruits",
+      "icon": "https://img.icons8.com/pastel-glyph/1x/beetroot-and-carrot-1.png",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU",
       "quantity": 0
     },
     {
-      "id": "7",
+      "id": 7,
       "name": "Mango",
       "weight": "1kg",
       "price": "600",
       "discount": "20",
-      "category": "vegetables & fruits",
+      "category": "Vegetables & fruits",
+      "icon": "https://img.icons8.com/pastel-glyph/1x/beetroot-and-carrot-1.png",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU",
+      "quantity": 0
+    },
+    {
+      "id": 8,
+      "name": "Cerveza Corona Extra",
+      "weight": "355ml",
+      "price": "3000",
+      "discount": "20",
+      "category": "Beverages",
+      "icon": "",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlkJFZ0MSiH2Qw3dCw8jZsqMSkHCxbZkimiw&usqp=CAU",
+      "quantity": 0
+    },
+    {
+      "id": 8,
+      "name": "Gaseosa Coca Cola Sin Azúcar",
+      "weight": "1500ml",
+      "price": "4590",
+      "discount": "20",
+      "category": "Beverages",
+      "icon": "https://img.icons8.com/carbon-copy/1x/cup.png",
+      "img": "https://static.merqueo.com/images/products/large/37170d87-9336-4ae7-b79d-586d3ad76b01.png",
+      "quantity": 0
+    },
+    {
+      "id": 9,
+      "name": "Súper Pechugas De Pollo Marinadas Friko Bandeja Peso Aprox. 2500gr x 2 Unidades",
+      "weight": "2500gr",
+      "price": "32000",
+      "discount": "2",
+      "category": "Meats & Seafood",
+      "icon": "https://img.icons8.com/carbon-copy/1x/steak-rare.png",
+      "img": "https://vaquitaexpress.com.co/media/catalog/product/cache/6c460a8dc87b18ea43a14fe5e35d2ec6/2/9/2950919_33.jpg",
+      "quantity": 0
+    },
+    {
+      "id": 10,
+      "name": "Jugo Del Valle Mora PET 500ML",
+      "weight": "500ML",
+      "price": "1490",
+      "discount": "15",
+      "category": "Beverages",
+      "icon": "https://img.icons8.com/carbon-copy/1x/cup.png",
+      "img": "https://static.merqueo.com/images/products/large/c8db0d66-2880-496d-b9d6-d467ffb6c748.png",
+      "quantity": 0
+    },
+    {
+      "id": 11,
+      "name": " Gaseosa Quatro Toronja Pet",
+      "weight": "1500ml",
+      "price": "4390",
+      "discount": "15",
+      "category": "Beverages",
+      "icon": "https://img.icons8.com/carbon-copy/1x/cup.png",
+      "img": "https://static.merqueo.com/images/products/large/d97f294d-6124-426c-a835-47ec0ea3b12f.png",
+      "quantity": 0
+    },
+    {
+      "id": 12,
+      "name": " Gaseosa Quatro Toronja Pet",
+      "weight": "1500ml",
+      "price": "4390",
+      "discount": "15",
+      "category": "Breakfast & Dairy",
+      "icon": "https://img.icons8.com/carbon-copy/1x/bread.png",
+      "img": "https://static.merqueo.com/images/products/large/d97f294d-6124-426c-a835-47ec0ea3b12f.png",
+      "quantity": 0
+    },
+    {
+      "id": 12,
+      "name": " Gaseosa Quatro Toronja Pet",
+      "weight": "1500ml",
+      "price": "4390",
+      "discount": "15",
+      "category": "Breakfast & Dairy",
+      "icon": "https://img.icons8.com/carbon-copy/1x/bread.png",
+      "img": "https://static.merqueo.com/images/products/large/d97f294d-6124-426c-a835-47ec0ea3b12f.png",
       "quantity": 0
     }
   ],
   "favorites": [
     {
-      "id": "1",
-      "name": "Tomate",
-      "weight": "500g",
-      "price": "500",
-      "discount": "15",
-      "category": "vegetables & fruits",
+      "id": 8,
+      "name": "Cerveza Corona Extra",
+      "weight": "355ml",
+      "price": "3000",
+      "discount": "20",
+      "category": "Beverages",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlkJFZ0MSiH2Qw3dCw8jZsqMSkHCxbZkimiw&usqp=CAU",
+      "quantity": 0
+    },
+    {
+      "id": 7,
+      "name": "Mango",
+      "weight": "1kg",
+      "price": "600",
+      "discount": "20",
+      "category": "Vegetables & fruits",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU",
+      "quantity": 0
+    },
+    {
+      "id": 2,
+      "name": "Manzana",
+      "weight": "1kg",
+      "price": "700",
+      "discount": "10",
+      "category": "Vegetables & fruits",
+      "icon": "https://img.icons8.com/pastel-glyph/1x/beetroot-and-carrot-1.png",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU",
       "quantity": 0
     }
   ],
   "users": [
-    {}
+    {
+      "name": "Maria",
+      "password": 123456
+    }
   ],
   "shopping": [
     {
-      "id": "7",
+      "id": 7,
       "name": "Mango",
       "weight": "1kg",
       "price": "600",
       "discount": "20",
-      "category": "vegetables & fruits",
+      "category": "Vegetables & fruits",
+      "icon": "https://img.icons8.com/pastel-glyph/1x/beetroot-and-carrot-1.png",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU",
       "quantity": 0
     },
     {
-      "id": "1",
-      "name": "Tomate",
-      "weight": "500g",
-      "price": "500",
-      "discount": "15",
-      "category": "vegetables & fruits",
+      "id": 2,
+      "name": "Manzana",
+      "weight": "1kg",
+      "price": "700",
+      "discount": "10",
+      "category": "Vegetables & fruits",
+      "icon": "https://img.icons8.com/pastel-glyph/1x/beetroot-and-carrot-1.png",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU",
       "quantity": 0
     }
@@ -117,10 +227,36 @@
   ],
   "buys": [
     {
-      "name": "maria",
-      "address": "CRA 61 A N 47 58",
-      "phone": "3173982019",
+      "couponFinded": {
+        "id": 1,
+        "code": "LXGV5235",
+        "discount": 10
+      },
       "id": 1
+    },
+    {
+      "couponFinded": {
+        "id": 1,
+        "code": "LXGV5235",
+        "discount": 10
+      },
+      "id": 2
+    },
+    {
+      "couponFinded": {
+        "id": 1,
+        "code": "LXGV5235",
+        "discount": 10
+      },
+      "id": 3
+    },
+    {
+      "couponFinded": {
+        "id": 1,
+        "code": "LXGV5235",
+        "discount": 10
+      },
+      "id": 4
     }
   ]
 }

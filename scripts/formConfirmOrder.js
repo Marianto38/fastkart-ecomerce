@@ -1,5 +1,7 @@
 console.log("conectado a formConfirmOrder.js");
-const urlBuys =  "http://localhost:3000/buys"
+export const urlBuys =  "http://localhost:3000/buys"
+import { urlShopping } from "./cart.js";
+import { getProductsFromUrl  } from "./products.js";
 
 // const formCheckout = document.getElementById('form-checkout');
 // formCheckout.addEventListener("submit", (event) => {
@@ -45,10 +47,10 @@ const urlBuys =  "http://localhost:3000/buys"
 
 const formCheckout = document.getElementById('form-checkout');
 
-formCheckout.addEventListener('submit', (event) => {
+formCheckout.addEventListener('submit', async (event) => {
   event.preventDefault(); // Evita el comportamiento predeterminado de enviar el formulario
 
-  const formData = {}; // Objeto para almacenar los datos del formulario
+  const userBuyer = {}; // Objeto para almacenar los datos del formulario
   let hasErrors = false; // Bandera para indicar si se encontraron errores
 
   // Recorre todos los elementos del formulario
@@ -62,13 +64,15 @@ formCheckout.addEventListener('submit', (event) => {
         hasErrors = true;
         break; // Detiene el bucle si se encuentra un campo vacío
       }
-      formData[input.name] = input.value; // Agrega el valor del elemento al objeto formData
+      userBuyer[input.name] = input.value; // Agrega el valor del elemento al objeto userBuyer
     }
   }
 
   if (!hasErrors) {
-    console.log(formData); // Imprime el objeto con los datos del formulario
-    addObjectToArray(urlBuys, formData);
+    console.log(userBuyer); // Imprime el objeto con los datos del formulario
+    addObjectToArray(urlBuys, {userBuyer});
+    const productsInShopping = await getProductsFromUrl(urlShopping);
+    addObjectToArray(urlBuys, {productsInShopping});
   }
 });
 

@@ -1,59 +1,60 @@
 {
   "products": [
     {
-      "id": 1,
       "name": "Tomate",
       "weight": "500g",
       "price": "500",
       "discount": "15",
       "category": "Vegetables & fruits",
       "icon": "https://img.icons8.com/pastel-glyph/1x/beetroot-and-carrot-1.png",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU",
-      "quantity": 0
+      "imagen": "https://img.icons8.com/pastel-glyph/1x/beetroot-and-carrot-1.png",
+      "quantity": "90",
+      "id": 1
     },
     {
       "id": 2,
-      "name": "Manzana",
+      "name": "Manzana gala",
       "weight": "1kg",
       "price": "700",
       "discount": "10",
       "category": "Vegetables & fruits",
       "icon": "https://img.icons8.com/pastel-glyph/1x/beetroot-and-carrot-1.png",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU",
-      "quantity": 0
+      "quantity": "0",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU"
     },
     {
       "id": 3,
-      "name": "Lechuga",
+      "name": "Lechuga Batavia por libra",
       "weight": "500g",
       "price": "250",
       "discount": "5",
       "category": "Vegetables & fruits",
       "icon": "https://img.icons8.com/pastel-glyph/1x/beetroot-and-carrot-1.png",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU",
-      "quantity": 0
+      "quantity": "300"
     },
     {
       "id": 4,
-      "name": "Papa",
+      "name": "Papa pastusa",
       "weight": "1kg",
       "price": "300",
       "discount": "0",
       "category": "Vegetables & fruits",
       "icon": "https://img.icons8.com/pastel-glyph/1x/beetroot-and-carrot-1.png",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU",
-      "quantity": 0
+      "quantity": "0"
     },
     {
       "id": 5,
-      "name": "Cebolla",
+      "name": "Cebolla junca",
       "weight": "500g",
       "price": "150",
       "discount": "10",
       "category": "Vegetables & fruits",
       "icon": "https://img.icons8.com/pastel-glyph/1x/beetroot-and-carrot-1.png",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU",
-      "quantity": 0
+      "quantity": "0"
     },
     {
       "id": 6,
@@ -67,26 +68,26 @@
       "quantity": 0
     },
     {
-      "id": 7,
-      "name": "Mango",
+      "name": "Mango Tommy",
       "weight": "1kg",
       "price": "600",
       "discount": "20",
       "category": "Vegetables & fruits",
       "icon": "https://img.icons8.com/pastel-glyph/1x/beetroot-and-carrot-1.png",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU",
-      "quantity": 0
+      "quantity": "0",
+      "id": 7
     },
     {
       "id": 8,
-      "name": "Cerveza Corona Extra",
+      "name": "Cerveza Corona Extra x 12",
       "weight": "355ml",
       "price": "3000",
       "discount": "20",
       "category": "Beverages",
-      "icon": "",
+      "icon": "https://img.icons8.com/pastel-glyph/1x/beetroot-and-carrot-1.png",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlkJFZ0MSiH2Qw3dCw8jZsqMSkHCxbZkimiw&usqp=CAU",
-      "quantity": 0
+      "quantity": "0"
     },
     {
       "id": 8,
@@ -134,60 +135,17 @@
     },
     {
       "id": 12,
-      "name": " Gaseosa Quatro Toronja Pet",
+      "name": " Gaseosa coca Toronja Pet",
       "weight": "1500ml",
       "price": "4390",
-      "discount": "15",
+      "discount": "29",
       "category": "Breakfast & Dairy",
       "icon": "https://img.icons8.com/carbon-copy/1x/bread.png",
       "img": "https://static.merqueo.com/images/products/large/d97f294d-6124-426c-a835-47ec0ea3b12f.png",
-      "quantity": 0
-    },
-    {
-      "id": 12,
-      "name": " Gaseosa Quatro Toronja Pet",
-      "weight": "1500ml",
-      "price": "4390",
-      "discount": "15",
-      "category": "Breakfast & Dairy",
-      "icon": "https://img.icons8.com/carbon-copy/1x/bread.png",
-      "img": "https://static.merqueo.com/images/products/large/d97f294d-6124-426c-a835-47ec0ea3b12f.png",
-      "quantity": 0
+      "quantity": "0"
     }
   ],
-  "favorites": [
-    {
-      "id": 8,
-      "name": "Cerveza Corona Extra",
-      "weight": "355ml",
-      "price": "3000",
-      "discount": "20",
-      "category": "Beverages",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlkJFZ0MSiH2Qw3dCw8jZsqMSkHCxbZkimiw&usqp=CAU",
-      "quantity": 0
-    },
-    {
-      "id": 7,
-      "name": "Mango",
-      "weight": "1kg",
-      "price": "600",
-      "discount": "20",
-      "category": "Vegetables & fruits",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU",
-      "quantity": 0
-    },
-    {
-      "id": 2,
-      "name": "Manzana",
-      "weight": "1kg",
-      "price": "700",
-      "discount": "10",
-      "category": "Vegetables & fruits",
-      "icon": "https://img.icons8.com/pastel-glyph/1x/beetroot-and-carrot-1.png",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU",
-      "quantity": 0
-    }
-  ],
+  "favorites": [],
   "users": [
     {
       "name": "Maria",
@@ -195,17 +153,6 @@
     }
   ],
   "shopping": [
-    {
-      "id": 7,
-      "name": "Mango",
-      "weight": "1kg",
-      "price": "600",
-      "discount": "20",
-      "category": "Vegetables & fruits",
-      "icon": "https://img.icons8.com/pastel-glyph/1x/beetroot-and-carrot-1.png",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU",
-      "quantity": 0
-    },
     {
       "id": 2,
       "name": "Manzana",

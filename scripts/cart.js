@@ -258,8 +258,8 @@ const applyCoupon = async (subtotal) => {
       console.log(couponFinded);
       alert("soy subtotal"+ subtotal + "soy descuento"+ discountByCoupon)
       const discountAmount = (subtotal * discountByCoupon) / 100;
-alert(discountAmount)
-alert(containerDiscount)
+        alert(discountAmount)
+        alert(containerDiscount)
       printSectionCouponAplied(containerDiscount, discountAmount);
       await axios.post(urlBuys, {couponFinded});
 

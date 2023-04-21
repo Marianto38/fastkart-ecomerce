@@ -69,7 +69,7 @@ export async function obtenerObjetoPorId(id, urlToPost) {
   <div class="col  card-product">
     <div class="card h-100">
     <i class="fa-sharp fa-solid fa-circle-xmark fs-2 close-btn"></i>
-    <div class="row justify-content-center card-links" id="btns-link">
+    <div class="row justify-content-center card-links" >
       <div class="col px-3" data-product="product" id=${product.id}>
         <i class="fa-solid fa-eye"  data-product="product" id=${product.id}></i>
       </div>
@@ -115,6 +115,7 @@ export async function obtenerObjetoPorId(id, urlToPost) {
 //4. Escucho el click sobre cada product
 
 document.addEventListener("click", (event) => {
+
  console.log(event.target);
 //indico el atributo donde quiero escuchar el click
   const productTarget = event.target.getAttribute("data-product");

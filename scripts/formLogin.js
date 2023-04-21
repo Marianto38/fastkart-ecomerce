@@ -33,6 +33,8 @@ const validateUser = async (userInfo) => {
   const userFinded = users.find((user) => user.name.toLowerCase() === userInfo.Nombre.toLowerCase() && user.password === Number(userInfo.Contraseña));
   if (userFinded) {
     alert("Usuario Logeado")
+    window.location.href = "../pages/admin.html";
+
   } else {
     alert("El usuario o contraseña ingresado no es correcto, Por favor digite nuevamente su información")
   }

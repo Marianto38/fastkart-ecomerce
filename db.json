@@ -1,29 +1,6 @@
 {
   "products": [
     {
-      "name": "Tomate",
-      "weight": "500g",
-      "price": "500",
-      "discount": "15",
-      "category": "Vegetables & fruits",
-      "icon": "https://img.icons8.com/pastel-glyph/1x/beetroot-and-carrot-1.png",
-      "imagen": "https://img.icons8.com/pastel-glyph/1x/beetroot-and-carrot-1.png",
-      "quantity": "90",
-      "id": 1
-    },
-    {
-      "id": 2,
-      "name": "Manzana gala",
-      "weight": "1kg",
-      "price": "700",
-      "discount": "10",
-      "category": "Vegetables & fruits",
-      "icon": "https://img.icons8.com/pastel-glyph/1x/beetroot-and-carrot-1.png",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU",
-      "quantity": "0",
-      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU"
-    },
-    {
       "id": 3,
       "name": "Lechuga Batavia por libra",
       "weight": "500g",

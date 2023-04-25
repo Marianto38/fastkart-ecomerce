@@ -1,58 +1,69 @@
 {
   "products": [
     {
+      "id": 2,
+      "name": "Jamon Sanduche Zenú",
+      "weight": "450g",
+      "price": "13000",
+      "discount": "5",
+      "category": "Grocery & Staples",
+      "icon": "https://img.icons8.com/pastel-glyph/1x/beetroot-and-carrot-1.png",
+      "img": "https://exitocol.vtexassets.com/arquivos/ids/1975512-500-auto?v=1768703000&width=500&height=auto&aspect=true",
+      "quantity": 0
+    },
+    {
       "id": 3,
       "name": "Lechuga Batavia por libra",
       "weight": "500g",
-      "price": "250",
+      "price": "2700",
       "discount": "5",
       "category": "Vegetables & fruits",
       "icon": "https://img.icons8.com/pastel-glyph/1x/beetroot-and-carrot-1.png",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU",
-      "quantity": "300"
+      "img": "https://exitocol.vtexassets.com/arquivos/ids/13316101-800-auto?v=637911326790670000&width=800&height=auto&aspect=true",
+      "quantity": 0
     },
     {
       "id": 4,
-      "name": "Papa pastusa",
+      "name": "Papa pastusa a granel",
       "weight": "1kg",
-      "price": "300",
+      "price": "3800",
       "discount": "0",
       "category": "Vegetables & fruits",
       "icon": "https://img.icons8.com/pastel-glyph/1x/beetroot-and-carrot-1.png",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU",
-      "quantity": "0"
+      "img": "https://exitocol.vtexassets.com/arquivos/ids/15938992-500-auto?v=1768703155&width=500&height=auto&aspect=true",
+      "quantity": 0
     },
     {
       "id": 5,
       "name": "Cebolla junca",
       "weight": "500g",
-      "price": "150",
+      "price": "6300",
       "discount": "10",
       "category": "Vegetables & fruits",
       "icon": "https://img.icons8.com/pastel-glyph/1x/beetroot-and-carrot-1.png",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU",
-      "quantity": "0"
+      "img": "https://exitocol.vtexassets.com/arquivos/ids/11324872-500-auto?v=1768706426&width=500&height=auto&aspect=true",
+      "quantity": 0
     },
     {
       "id": 6,
       "name": "Plátano",
       "weight": "1kg",
-      "price": "400",
+      "price": "4000",
       "discount": "0",
       "category": "Vegetables & fruits",
       "icon": "https://img.icons8.com/pastel-glyph/1x/beetroot-and-carrot-1.png",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU",
+      "img": "https://exitocol.vtexassets.com/arquivos/ids/14954301-500-auto?v=638001775734100000&width=500&height=auto&aspect=true",
       "quantity": 0
     },
     {
-      "name": "Mango Tommy",
+      "name": "Tomate a granel",
       "weight": "1kg",
-      "price": "600",
+      "price": "6000",
       "discount": "20",
       "category": "Vegetables & fruits",
       "icon": "https://img.icons8.com/pastel-glyph/1x/beetroot-and-carrot-1.png",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU",
-      "quantity": "0",
+      "quantity": 0,
       "id": 7
     },
     {
@@ -61,10 +72,10 @@
       "weight": "355ml",
       "price": "3000",
       "discount": "20",
-      "category": "Beverages",
+      "category": "Wines & Alcohol Drinks",
       "icon": "https://img.icons8.com/pastel-glyph/1x/beetroot-and-carrot-1.png",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlkJFZ0MSiH2Qw3dCw8jZsqMSkHCxbZkimiw&usqp=CAU",
-      "quantity": "0"
+      "quantity": 0
     },
     {
       "id": 8,
@@ -90,10 +101,10 @@
     },
     {
       "id": 10,
-      "name": "Jugo Del Valle Mora PET 500ML",
+      "name": "Jugo Del Valle Mora PET",
       "weight": "500ML",
       "price": "1490",
-      "discount": "15",
+      "discount": "10",
       "category": "Beverages",
       "icon": "https://img.icons8.com/carbon-copy/1x/cup.png",
       "img": "https://static.merqueo.com/images/products/large/c8db0d66-2880-496d-b9d6-d467ffb6c748.png",
@@ -104,7 +115,7 @@
       "name": " Gaseosa Quatro Toronja Pet",
       "weight": "1500ml",
       "price": "4390",
-      "discount": "15",
+      "discount": "10",
       "category": "Beverages",
       "icon": "https://img.icons8.com/carbon-copy/1x/cup.png",
       "img": "https://static.merqueo.com/images/products/large/d97f294d-6124-426c-a835-47ec0ea3b12f.png",
@@ -112,17 +123,326 @@
     },
     {
       "id": 12,
-      "name": " Gaseosa coca Toronja Pet",
-      "weight": "1500ml",
-      "price": "4390",
-      "discount": "29",
+      "name": "Jugo Frutal Surtido DEL VALLE",
+      "weight": "1880ml",
+      "price": "6300",
+      "discount": "2",
+      "category": "Beverages",
+      "icon": "https://img.icons8.com/carbon-copy/1x/bread.png",
+      "img": "https://exitocol.vtexassets.com/arquivos/ids/17837892-500-auto?v=1768703518&width=500&height=auto&aspect=true",
+      "quantity": 0
+    },
+    {
+      "id": 13,
+      "name": "Modificador de Leche MILO",
+      "weight": "500gr",
+      "price": "17800",
+      "discount": "2",
+      "category": "Beverages",
+      "icon": "https://img.icons8.com/carbon-copy/1x/bread.png",
+      "img": "https://exitocol.vtexassets.com/arquivos/ids/17954144-800-auto?v=638173437633470000&width=800&height=auto&aspect=true",
+      "quantity": 0
+    },
+    {
+      "id": 14,
+      "name": "Carne De Cerdo Económica",
+      "weight": "500gr",
+      "price": "10700",
+      "discount": "2",
+      "category": "Meats & Seafood",
+      "icon": "https://img.icons8.com/carbon-copy/1x/bread.png",
+      "img": "https://exitocol.vtexassets.com/arquivos/ids/15853997-500-auto?v=638056029015200000&width=500&height=auto&aspect=true",
+      "quantity": 0
+    },
+    {
+      "id": 15,
+      "name": "Pollo Entero con Vísceras FRESCAMPO",
+      "weight": "2000gr",
+      "price": "19500",
+      "discount": "2",
+      "category": "Meats & Seafood",
+      "icon": "https://img.icons8.com/carbon-copy/1x/bread.png",
+      "img": "https://exitocol.vtexassets.com/arquivos/ids/16847011-500-auto?v=1768701221&width=500&height=auto&aspect=true",
+      "quantity": 0
+    },
+    {
+      "id": 16,
+      "name": "Filete de Salmón ANTILLANA",
+      "weight": "450gr",
+      "price": "48000",
+      "discount": "2",
+      "category": "Meats & Seafood",
+      "icon": "https://img.icons8.com/carbon-copy/1x/bread.png",
+      "img": "https://exitocol.vtexassets.com/arquivos/ids/17047638-500-auto?v=1768702343&width=500&height=auto&aspect=true",
+      "quantity": 0
+    },
+    {
+      "id": 17,
+      "name": "Vino tinto insigne carmenere CARMEN MARCA EXCLUSIVA",
+      "weight": "750ml",
+      "price": "35000",
+      "discount": "2",
+      "category": "Wines & Alcohol Drinks",
+      "icon": "https://img.icons8.com/carbon-copy/1x/bread.png",
+      "img": "https://exitocol.vtexassets.com/arquivos/ids/8883819-500-auto?v=1768693207&width=500&height=auto&aspect=true",
+      "quantity": 0
+    },
+    {
+      "id": 18,
+      "name": "Licor De Ron Esencial VIEJO DE CALDAS",
+      "weight": "750ml",
+      "price": "38700",
+      "discount": "2",
+      "category": "Wines & Alcohol Drinks",
+      "icon": "https://img.icons8.com/carbon-copy/1x/bread.png",
+      "img": "https://exitocol.vtexassets.com/arquivos/ids/9608868-500-auto?v=1768680004&width=500&height=auto&aspect=true",
+      "quantity": 0
+    },
+    {
+      "id": 19,
+      "name": "Ron Medellín extra añejo 8 años botella",
+      "weight": "750ml",
+      "price": "73700",
+      "discount": "2",
+      "category": "Wines & Alcohol Drinks",
+      "icon": "https://img.icons8.com/carbon-copy/1x/bread.png",
+      "img": "https://exitocol.vtexassets.com/arquivos/ids/2053350-800-auto?v=637270336105270000&width=800&height=auto&aspect=true",
+      "quantity": 0
+    },
+    {
+      "id": 20,
+      "name": "Pan Tajado Blanco Actidefensis BIMBO",
+      "weight": "600gr",
+      "price": "7500",
+      "discount": "2",
       "category": "Breakfast & Dairy",
       "icon": "https://img.icons8.com/carbon-copy/1x/bread.png",
-      "img": "https://static.merqueo.com/images/products/large/d97f294d-6124-426c-a835-47ec0ea3b12f.png",
-      "quantity": "0"
+      "img": "https://exitocol.vtexassets.com/arquivos/ids/17855518-800-auto?v=638170895323330000&width=800&height=auto&aspect=true",
+      "quantity": 0
+    },
+    {
+      "id": 21,
+      "name": "HARINA MAIZ BLANCA PAN ",
+      "weight": "1000gr",
+      "price": "4990",
+      "discount": "2",
+      "category": "Breakfast & Dairy",
+      "icon": "https://img.icons8.com/carbon-copy/1x/bread.png",
+      "img": "https://exitocol.vtexassets.com/arquivos/ids/15963971-800-auto?v=638070673086800000&width=800&height=auto&aspect=true",
+      "quantity": 0
+    },
+    {
+      "id": 22,
+      "name": "PAN INTEGRAL X650 GRAMOS",
+      "weight": "650gr",
+      "price": "7035",
+      "discount": "2",
+      "category": "Breakfast & Dairy",
+      "icon": "https://img.icons8.com/carbon-copy/1x/bread.png",
+      "img": "https://exitocol.vtexassets.com/arquivos/ids/12612218-800-auto?v=637868359908400000&width=800&height=auto&aspect=true",
+      "quantity": 0
+    },
+    {
+      "id": 23,
+      "name": "Cono Chococono Pack X6 CREM",
+      "weight": "450ml",
+      "price": "14000",
+      "discount": "2",
+      "category": "Frozen Food",
+      "icon": "https://img.icons8.com/carbon-copy/1x/bread.png",
+      "img": "https://exitocol.vtexassets.com/arquivos/ids/15781075-800-auto?v=638054078525000000&width=800&height=auto&aspect=true",
+      "quantity": 0
+    },
+    {
+      "id": 24,
+      "name": "Helado Cookies Cream",
+      "weight": "5Lt",
+      "price": "34650",
+      "discount": "2",
+      "category": "Frozen Food",
+      "icon": "https://img.icons8.com/carbon-copy/1x/bread.png",
+      "img": "https://exitocol.vtexassets.com/arquivos/ids/15801356-500-auto?v=638054246629130000&width=500&height=auto&aspect=true",
+      "quantity": 0
+    },
+    {
+      "id": 25,
+      "name": "HELADO VAINILLA COLOMBINA",
+      "weight": "300gr",
+      "price": "13550",
+      "discount": "2",
+      "category": "Frozen Food",
+      "icon": "https://img.icons8.com/carbon-copy/1x/bread.png",
+      "img": "https://exitocol.vtexassets.com/arquivos/ids/15854922-500-auto?v=1768673389&width=500&height=auto&aspect=true",
+      "quantity": 0
+    },
+    {
+      "id": 26,
+      "name": "GALLETAS X 6 TACOS SALTIN NOEL",
+      "weight": "531gr",
+      "price": "7260",
+      "discount": "2",
+      "category": "Biscuit & Snack",
+      "icon": "https://img.icons8.com/carbon-copy/1x/bread.png",
+      "img": "https://exitocol.vtexassets.com/arquivos/ids/15914109-500-auto?v=638066844551970000&width=500&height=auto&aspect=true",
+      "quantity": 0
+    },
+    {
+      "id": 27,
+      "name": "Galletas Original CLUB SOCIAL",
+      "weight": "234gr",
+      "price": "4675",
+      "discount": "2",
+      "category": "Biscuit & Snack",
+      "icon": "https://img.icons8.com/carbon-copy/1x/bread.png",
+      "img": "https://exitocol.vtexassets.com/arquivos/ids/15722455-500-auto?v=638052671305930000&width=500&height=auto&aspect=true",
+      "quantity": 0
+    },
+    {
+      "id": 28,
+      "name": "Galletas Original OREO",
+      "weight": "432gr",
+      "price": "9680",
+      "discount": "2",
+      "category": "Biscuit & Snack",
+      "icon": "https://img.icons8.com/carbon-copy/1x/bread.png",
+      "img": "https://exitocol.vtexassets.com/arquivos/ids/17371906-800-auto?v=638158531752900000&width=800&height=auto&aspect=true",
+      "quantity": 0
+    },
+    {
+      "id": 29,
+      "name": "Galletas Minichips Chocol FESTIVAL",
+      "weight": "420gr",
+      "price": "12000",
+      "discount": "2",
+      "category": "Biscuit & Snack",
+      "icon": "https://img.icons8.com/carbon-copy/1x/bread.png",
+      "img": "https://exitocol.vtexassets.com/arquivos/ids/17202571-500-auto?v=1768707832&width=500&height=auto&aspect=true",
+      "quantity": 0
+    },
+    {
+      "id": 30,
+      "name": "Lenteja FRESCAMPO",
+      "weight": "500gr",
+      "price": "3440",
+      "discount": "2",
+      "category": "Grocery & Staples",
+      "icon": "https://img.icons8.com/carbon-copy/1x/bread.png",
+      "img": "https://exitocol.vtexassets.com/arquivos/ids/13174736-800-auto?v=637899459493500000&width=800&height=auto&aspect=true",
+      "quantity": 0
+    },
+    {
+      "id": 31,
+      "name": "Sal Refinada REFISAL",
+      "weight": "1000gr",
+      "price": "2080",
+      "discount": "2",
+      "category": "Grocery & Staples",
+      "icon": "https://img.icons8.com/carbon-copy/1x/bread.png",
+      "img": "https://exitocol.vtexassets.com/arquivos/ids/12250113-800-auto?v=637840947549370000&width=800&height=auto&aspect=true",
+      "quantity": 0
+    },
+    {
+      "id": 32,
+      "name": "Aceite Vegetal FRESCAMPO",
+      "weight": "3000ml",
+      "price": "24970",
+      "discount": "2",
+      "category": "Grocery & Staples",
+      "icon": "https://img.icons8.com/carbon-copy/1x/bread.png",
+      "img": "https://exitocol.vtexassets.com/arquivos/ids/13929565-800-auto?v=637944648796900000&width=800&height=auto&aspect=true",
+      "quantity": 0
+    },
+    {
+      "id": 33,
+      "name": "Detergente Regular Polvo ARIEL",
+      "weight": "3300gr",
+      "price": "32900",
+      "discount": "2",
+      "category": "Grocery & Staples",
+      "icon": "https://img.icons8.com/carbon-copy/1x/bread.png",
+      "img": "https://exitocol.vtexassets.com/arquivos/ids/16350349-800-auto?v=638103378446100000&width=800&height=auto&aspect=true",
+      "quantity": 0
+    },
+    {
+      "id": 34,
+      "name": "Cerveza SIXPACK COSTENA ",
+      "weight": "1980ml",
+      "price": "8900",
+      "discount": "2",
+      "category": "Grocery & Staples",
+      "icon": "https://img.icons8.com/carbon-copy/1x/bread.png",
+      "img": "https://exitocol.vtexassets.com/arquivos/ids/16705821-500-auto?v=1768708350&width=500&height=auto&aspect=true",
+      "quantity": 0
+    },
+    {
+      "id": 35,
+      "name": "Aguacate Hass 1 und",
+      "weight": "1und",
+      "price": "1540",
+      "discount": "2",
+      "category": "Wines & Alcohol Drinks",
+      "icon": "https://img.icons8.com/carbon-copy/1x/bread.png",
+      "img": "https://exitocol.vtexassets.com/arquivos/ids/11850852-500-auto?v=1768709023&width=500&height=auto&aspect=true",
+      "quantity": 0
+    },
+    {
+      "id": 36,
+      "name": "ALIM LACTEO C/ZUCARITAS X4 UND BON YURT",
+      "weight": "680gr",
+      "price": "14200",
+      "discount": "2",
+      "category": "Milk & Daires",
+      "icon": "https://img.icons8.com/carbon-copy/1x/bread.png",
+      "img": "https://exitocol.vtexassets.com/arquivos/ids/17860621-800-auto?v=638170923426670000&width=800&height=auto&aspect=true",
+      "quantity": 0
+    },
+    {
+      "id": 37,
+      "name": "Alim Lacteo Melocoton Bolsa YOGO YOGO",
+      "weight": "1000 gr",
+      "price": "5710",
+      "discount": "2",
+      "category": "Milk & Daires",
+      "icon": "https://img.icons8.com/carbon-copy/1x/bread.png",
+      "img": "https://exitocol.vtexassets.com/arquivos/ids/11734327-800-auto?v=637795843530730000&width=800&height=auto&aspect=true",
+      "quantity": 0
+    },
+    {
+      "id": 38,
+      "name": "Tapete De Entrenamiento Pet Spa ",
+      "weight": "30und",
+      "price": "55852",
+      "discount": "2",
+      "category": "Pet Food",
+      "icon": "https://img.icons8.com/carbon-copy/1x/bread.png",
+      "img": "https://exitocol.vtexassets.com/arquivos/ids/4361033-500-auto?v=637376241128000000&width=500&height=auto&aspect=true",
+      "quantity": 0
+    },
+    {
+      "id": 39,
+      "name": "Guacal 1 Razas Pequeñas - Azul-Beige",
+      "weight": "1und",
+      "price": "115000",
+      "discount": "2",
+      "category": "Pet Food",
+      "icon": "https://img.icons8.com/carbon-copy/1x/bread.png",
+      "img": "https://exitocol.vtexassets.com/arquivos/ids/776549-500-auto?v=637067857371830000&width=500&height=auto&aspect=true",
+      "quantity": 0
     }
   ],
-  "favorites": [],
+  "favorites": [
+    {
+      "id": 2,
+      "name": "Jamon Sanduche Zenú",
+      "weight": "450g",
+      "price": "13000",
+      "discount": "5",
+      "category": "Grocery & Staples",
+      "icon": "https://img.icons8.com/pastel-glyph/1x/beetroot-and-carrot-1.png",
+      "img": "https://exitocol.vtexassets.com/arquivos/ids/1975512-500-auto?v=1768703000&width=500&height=auto&aspect=true",
+      "quantity": 0
+    }
+  ],
   "users": [
     {
       "name": "Maria",
@@ -131,15 +451,37 @@
   ],
   "shopping": [
     {
-      "id": 2,
-      "name": "Manzana",
+      "id": 16,
+      "name": "Filete de Salmón ANTILLANA",
+      "weight": "450gr",
+      "price": "48000",
+      "discount": "2",
+      "category": "Meats & Seafood",
+      "icon": "https://img.icons8.com/carbon-copy/1x/bread.png",
+      "img": "https://exitocol.vtexassets.com/arquivos/ids/17047638-500-auto?v=1768702343&width=500&height=auto&aspect=true",
+      "quantity": 2
+    },
+    {
+      "id": 1,
+      "name": "Huevo Rojo A",
+      "weight": "30u",
+      "price": "15730",
+      "discount": "5",
+      "category": "Milk & Daires",
+      "icon": "https://img.icons8.com/pastel-glyph/1x/beetroot-and-carrot-1.png",
+      "img": "https://exitocol.vtexassets.com/arquivos/ids/16844810-500-auto?v=638140805656170000&width=500&height=auto&aspect=true",
+      "quantity": 1
+    },
+    {
+      "id": 6,
+      "name": "Plátano",
       "weight": "1kg",
-      "price": "700",
-      "discount": "10",
+      "price": "4000",
+      "discount": "0",
       "category": "Vegetables & fruits",
       "icon": "https://img.icons8.com/pastel-glyph/1x/beetroot-and-carrot-1.png",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU",
-      "quantity": 0
+      "img": "https://exitocol.vtexassets.com/arquivos/ids/14954301-500-auto?v=638001775734100000&width=500&height=auto&aspect=true",
+      "quantity": 1
     }
   ],
   "coupons": [
@@ -147,40 +489,145 @@
       "id": 1,
       "code": "LXGV5235",
       "discount": 10
+    },
+    {
+      "id": 1,
+      "code": "Fast024",
+      "discount": 15
     }
   ],
   "buys": [
     {
       "couponFinded": {
         "id": 1,
-        "code": "LXGV5235",
-        "discount": 10
+        "code": "Fast024",
+        "discount": 15
       },
       "id": 1
     },
     {
-      "couponFinded": {
-        "id": 1,
-        "code": "LXGV5235",
-        "discount": 10
-      },
+      "Nombre": "Maria",
+      "dirección": "Cra 61 A número 47-58",
+      "Teléfono": "3006666666",
       "id": 2
     },
-    {
-      "couponFinded": {
-        "id": 1,
-        "code": "LXGV5235",
-        "discount": 10
+    [
+      {
+        "id": 16,
+        "name": "Filete de Salmón ANTILLANA",
+        "weight": "450gr",
+        "price": "48000",
+        "discount": "2",
+        "category": "Meats & Seafood",
+        "icon": "https://img.icons8.com/carbon-copy/1x/bread.png",
+        "img": "https://exitocol.vtexassets.com/arquivos/ids/17047638-500-auto?v=1768702343&width=500&height=auto&aspect=true",
+        "quantity": 2
       },
-      "id": 3
+      {
+        "id": 1,
+        "name": "Huevo Rojo A",
+        "weight": "30u",
+        "price": "15730",
+        "discount": "5",
+        "category": "Milk & Daires",
+        "icon": "https://img.icons8.com/pastel-glyph/1x/beetroot-and-carrot-1.png",
+        "img": "https://exitocol.vtexassets.com/arquivos/ids/16844810-500-auto?v=638140805656170000&width=500&height=auto&aspect=true",
+        "quantity": 1
+      },
+      {
+        "id": 6,
+        "name": "Plátano",
+        "weight": "1kg",
+        "price": "4000",
+        "discount": "0",
+        "category": "Vegetables & fruits",
+        "icon": "https://img.icons8.com/pastel-glyph/1x/beetroot-and-carrot-1.png",
+        "img": "https://exitocol.vtexassets.com/arquivos/ids/14954301-500-auto?v=638001775734100000&width=500&height=auto&aspect=true",
+        "quantity": 1
+      }
+    ]
+  ],
+  "Allbuys": [
+    {
+      "objectInBuys": [
+        {
+          "Nombre": "Maria",
+          "dirección": "CRA 61 A N 47 58",
+          "Teléfono": "55555",
+          "id": 1
+        },
+        [
+          {
+            "id": 4,
+            "name": "Papa pastusa",
+            "weight": "1kg",
+            "price": "300",
+            "discount": "0",
+            "category": "Vegetables & fruits",
+            "icon": "https://img.icons8.com/pastel-glyph/1x/beetroot-and-carrot-1.png",
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU",
+            "quantity": 4
+          },
+          {
+            "name": "Mango Tommy",
+            "weight": "1kg",
+            "price": "600",
+            "discount": "20",
+            "category": "Vegetables & fruits",
+            "icon": "https://img.icons8.com/pastel-glyph/1x/beetroot-and-carrot-1.png",
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU",
+            "quantity": 9,
+            "id": 7
+          }
+        ]
+      ],
+      "id": 1
     },
     {
-      "couponFinded": {
-        "id": 1,
-        "code": "LXGV5235",
-        "discount": 10
-      },
-      "id": 4
+      "objectInBuys": [
+        {
+          "Nombre": "samuel",
+          "dirección": "dd",
+          "Teléfono": "8888888",
+          "id": 1
+        },
+        [
+          {
+            "id": 4,
+            "name": "Papa pastusa",
+            "weight": "1kg",
+            "price": "300",
+            "discount": "0",
+            "category": "Vegetables & fruits",
+            "icon": "https://img.icons8.com/pastel-glyph/1x/beetroot-and-carrot-1.png",
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU",
+            "quantity": 4
+          },
+          {
+            "name": "Mango Tommy",
+            "weight": "1kg",
+            "price": "600",
+            "discount": "20",
+            "category": "Vegetables & fruits",
+            "icon": "https://img.icons8.com/pastel-glyph/1x/beetroot-and-carrot-1.png",
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU",
+            "quantity": 9,
+            "id": 7
+          },
+          {
+            "name": "Mango azucar",
+            "weight": "1kg",
+            "price": "600",
+            "discount": "20",
+            "category": "Vegetables & fruits",
+            "icon": "https://img.icons8.com/pastel-glyph/1x/beetroot-and-carrot-1.png",
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUQcOiph6tQHO9a_n5Jl6O_pP1dQIGZqwxA&usqp=CAU",
+            "quantity": 9,
+            "id": 7
+          }
+        ]
+      ],
+      "id": 2
     }
   ]
 }

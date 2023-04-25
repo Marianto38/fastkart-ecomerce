@@ -48,7 +48,7 @@
 
     <nav class=" container  navbar navbar-light bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand fs-6" href="#">FASTKART</a>
+        <a class="navbar-brand fs-6" href="#"><img src="../images/logo.png" alt="" style="width: 50%;"></a>
         <div class="container-location justify-content-end">
           <i class="fa-solid fa-location-dot bg-secondary fs-6 p-2 rounded-3"></i>
         </div>
@@ -75,27 +75,33 @@
             </button>
             <ul class="dropdown-menu"   id="a" >
                 <!-- ************aqui se renderiza los productos en cart dropdown*********** -->
-              <li class=" container-cart-dropdown" id="b">
+                <li class="container-cart-dropdown" id="b">
 
-              </li>
-              <li><p class="ps-3 m-2"> Total: </p></li>
-              <li>
-                <div class="row justify-content-between">
-                  <div class="col ms-3">  <a href="./cart.html" class="btn btn-outline-success"> View Cart</a></div>
-                  <div class="col pe-3 me-3 d-flex justify-content-end"> <a href="./cart.html" class="btn btn-success"> View Cart</a></div>
-                </div>
-              </li>
-            </ul>
+                </li>
+                <li><div class="sub-drop mt-3 container">
 
+                </div></li>
+                <!-- <li><p class="ps-3 m-2 ">  Total: </p></li> -->
+                <li>
+                  <div class="row justify-content-between">
+                    <div class="col ms-3">  <a href="./cart.html" class="btn btn-outline-success"> View Cart</a></div>
+                    <div class="col pe-3 me-3 d-flex justify-content-end"> <a href="./cart.html" class="btn btn-success"> Checkout </a></div>
+                  </div>
+                </li>
+              </ul>
+
+            </div>
+            <div class="btn-group dropstart">
+              <button type="button" class="btn btn-transparent dropdown-toggle-invisible" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-regular fa-user"></i>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./formLogin.html">Login Admin</a></li>
+              </ul>
+            </div>
           </div>
-
-
-
-          <a class="navbar-brand fs-5 px-3 text-center m-0" href="#"><i class="fa-regular fa-user"></i></a>
-        </div>
-      </nav>
-    </div>
-
+        </nav>
+      </div>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container container-fluid px-0">
@@ -289,7 +295,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Ingresar Datos de Comprador</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -311,8 +317,8 @@
 
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="cubmit" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
+            <button type="cubmit" class="btn btn-danger">Buy Now</button>
           </div>
         </form>
     </div>

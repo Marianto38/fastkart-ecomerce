@@ -1,440 +1,482 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  <link rel="stylesheet" href="../styles/products.css">
-  <title>Document</title>
-</head>
-<body>
-  <header class="sticky-top">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-success py-0">
-      <div class="container container-fluid">
-        <a class="navbar-brand fs-6" href="#"><span class="fw-bold promo">Welcome to Fastkart!</span>  Wrap new offers/gift every signle day on Weekends. <span class="fw-bold">New Cupon Code: Fast024</span></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item dropdown border-end">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <span> <img src="../images/flag.png" alt="" class="flag me-1"></span> English
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../styles/products.css">
+    <title>HOME</title>
+  </head>
+  <body>
+    <header class="sticky-top">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-success py-0">
+        <div class="container container-fluid">
+          <a class="navbar-brand fs-6" href="#"><span class="fw-bold promo">Welcome to Fastkart!</span>  Wrap new offers/gift every signle day on Weekends. <span class="fw-bold">New Cupon Code: Fast024</span></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown border-end">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span> <img src="../images/flag.png" alt="" class="flag me-1"></span> English
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  USD
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <nav class=" container  navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand fs-6" href="#"><img src="../images/logo.png" alt="" style="width: 50%;"></a>
+          <div class="d-flex justify-content-center">
+            <div class="container-location justify-content-end">
+              <i class="fa-solid fa-location-dot bg-secondary fs-6 p-2 rounded-3"></i>
+            </div>
+            <ul class="list mb-0">
+              <li>
+                <form id="form-search">
+                  <div class="container-search">
+                    <input
+                      type="search"
+                      id="mySearch"
+                      name="buscador"
+                      placeholder="I'm searching for..." />
+                    <button type="submit"><i class="fas fa-search vector-search"></i></button>
+                  </div>
+                </form>
+              </li>
+            </ul>
+          </div>
+          <div class="justify-content-end text-center ms-5">
+            <a class="navbar-brand fs-5 px-3 text-center m-0 border-end" href="#"><i class="fa-solid fa-phone-volume"></i></a>
+            <a class="navbar-brand fs-5 px-3 text-center m-0 border-end" href="./favorites.html"><i class="fa-solid fa-heart"></i></a>
+            <div class="btn-group dropdown-hover">
+              <button type="button" class="btn btn-transparent dropdown-toggle-invisible" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-cart-shopping" style="position: relative;"></i><span class="badge bg-danger baged-qty"></span>
+              </button>
+              <ul class="dropdown-menu"   id="a" >
+                  <!-- ************aqui se renderiza los productos en cart dropdown*********** -->
+                <li class="container-cart-dropdown" id="b">
+
+                </li>
+                <li><div class="sub-drop mt-3 container">
+
+                </div></li>
+                <!-- <li><p class="ps-3 m-2 ">  Total: </p></li> -->
+                <li>
+                  <div class="row justify-content-between">
+                    <div class="col ms-3">  <a href="./cart.html" class="btn btn-outline-success"> View Cart</a></div>
+                    <div class="col pe-3 me-3 d-flex justify-content-end"> <a href="./cart.html" class="btn btn-success"> Checkout </a></div>
+                  </div>
+                </li>
               </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                USD
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
+
+            </div>
+            <div class="btn-group dropstart">
+              <button type="button" class="btn btn-transparent dropdown-toggle-invisible" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-regular fa-user"></i>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./formLogin.html">Login Admin</a></li>
               </ul>
-            </li>
-          </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container container-fluid px-0">
+          <div class="dropdown">
+            <button class="btn btn-success border-0 dropdown-toggle-invisible" type="button" id="dropdown2" data-bs-toggle="dropdown" aria-expanded="false">
+            <div class="d-flex align-items-center p-1"> <span class="material-symbols-outlined px-2">tune</span> <span class="px-2 "> All Categories</span></div>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-light bg-secondary" id="container-categories" aria-labelledby="dropdown2">
+              <li><a class="dropdown-item active bg-secondary text-dark" href="#">Category</a></li>
+              <li><div class="progress" style="height: 1px;">
+                <div class="progress-bar bg-success" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              </div></li>
+              <!-- <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item" href="#">Separated link</a></li> -->
+            </ul>
+          </div>
+          <button class="navbar-toggler dropdown-toggle-invisible" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse fs-5" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll justify-content-center tyle="--bs-scroll-height: 100px;">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Home
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Shop
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Product
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Mega Menú
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Blog
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Pages
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Contact</a>
+              </li>
+            </ul>
+            <i class="fa-solid fa-bolt p-2 bg-secondary ms-5"></i>
+
+          </div>
+        </div>
+      </nav>
+    </header>
+
+
+    <section>
+
+
+    <div class="container">
+        <div class="row ">
+          <div class="col-12 col-md-7  bg-info rounded-3 me-4">
+            <div class="row align-items-center">
+              <div class="col ps-2 ps-md-5">
+                <p  class="fs-5"> Exclusive offer <span class="badge rounded-pill bg-warning bg-opacity-10 text-danger">30% off</span></p>
+                <h3>STAY HOME & DELIVERED YOUR</h3>
+                <h3><span class="text-success fw-bold fs-1">DAILY NEEDS</span></h3>
+                <p>vegetables contain many vitamins and minerals that are good for your health.</p>
+                <button type="button" class="btn btn-danger">Shop Now <i class="fa-solid fa-arrow-right"></i></button>
+              </div>
+              <div class="col pb-0">
+                <img src="../images/frutas-banner.png" alt="" style="max-height: 450px;">
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-5" style="max-width: 450px;">
+            <div class="row rounded-3 py-3" style="background-image: linear-gradient(rgba(249, 245, 245, 0.4),rgba(253, 252, 252, 0.4)), url(../images/bg-nut.png); background-size: cover;">
+              <div class="row align-items-center">
+                <div class="col ps-3 w-50">
+                  <p class="text-danger fs-3 mb-0 fw-bold">45% <span class="text-dark fs-6"> OFF</span></p>
+                  <h3><span class="text-success fw-bold fs-5 pt-0 mt-0">Nut Colection</span></h3>
+                  <p class="w-50">We deliver organic vegetables & fruits</p>
+                  <button type="button" class="btn btn-transparent ps-0">Shop Now <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+              </div>
+            </div>
+            <div class="row rounded-3 py-3 mt-4" style="background-image: linear-gradient(rgba(249, 245, 245, 0.1),rgba(253, 252, 252, 0.1)), url(../images/bg-3.jpg); background-size: cover;">
+              <div class="row align-items-center">
+                <div class="col ps-3 w-50">
+                  <h3><span class="text-success fw-bold fs-5 pt-0 mt-0">HeaktyFood</span></h3>
+                  <p class="text-danger fs-5 mb-0">Organic Market</p>
+                  <p class="w-50">Start your daily shopping with som...</p>
+                  <button type="button" class="btn btn-transparent ps-0">Shop Now <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </nav>
+    </section>
 
-    <nav class=" container  navbar navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand fs-6" href="#"><img src="../images/logo.png" alt="" style="width: 50%;"></a>
-        <div class="d-flex justify-content-center">
-          <div class="container-location justify-content-end">
-            <i class="fa-solid fa-location-dot bg-secondary fs-6 p-2 rounded-3"></i>
+    <section>
+      <div class="container">
+        <div class="row mt-4">
+          <div class="col-12 col-md-4">
+              <div class="row align-items-center ">
+                <div class="col ps-0 bg-info  bg-card-offer py-3 rounded-3" style="position: relative; height: 12rem;">
+                  <div class=" bg-offer p-0 m-0">
+                    <p class="text-danger ps-3 fs-5 mb-0">5% OFF</p>
+                    <p class=" fw-bold ps-3  pt-0 mt-0 mb-0">Hot Deals on New Items</p>
+                    <p class="ps-3 pt-0 mt-0">Daily Essentials Eggs & Dairy</p>
+                  </div>
+                  <img src="../images/eggs.png" alt="" class="img-publi-3 egg">
+                  <div class="oval"></div>
+                    <button type="button" class="promotions btn btn-success text-light pb-0">Shop Now <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+              </div>
+
           </div>
-          <ul class="list mb-0">
-            <li>
-              <form id="form-search">
-                <div class="container-search">
-                  <input
-                    type="search"
-                    id="mySearch"
-                    name="buscador"
-                    placeholder="I'm searching for..." />
-                  <button type="submit"><i class="fas fa-search vector-search"></i></button>
+          <div class="col-12 col-md-4">
+            <div class="row g-1 rounded-3">
+                <div class="col ps-0 bg-info bg-card-offer py-3 rounded-3" style="position: relative; height: 12rem;">
+                  <div class=" bg-offer p-0 m-0">
+                    <p class="text-danger ps-3 fs-5 mb-0">5% OFF</p>
+                    <p class=" fw-bold ps-3  pt-0 mt-0 mb-0">Buy More & Save More</p>
+                    <p class="ps-3 pt-0 mt-0">Fresh Vegetables</p>
+                  </div>
+                  <img src="../images/fruit.png" alt="" class="img-publi-3">
+                  <div class="oval"></div>
+                    <button type="button" class="promotions btn btn-danger text-light pb-0">Shop Now <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
-              </form>
-            </li>
-          </ul>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="row rounded-3">
+                <div class="col ps-0 bg-info bg-card-offer py-3 rounded-3" style="position: relative; height: 12rem;">
+                  <div class=" bg-offer p-0 m-0">
+                    <p class="text-danger ps-3 fs-5 mb-0">5% OFF</p>
+                    <p class=" fw-bold ps-3  pt-0 mt-0 mb-0">Organic Meat Prepared</p>
+                    <p class="ps-3 pt-0 mt-0">Delivered to Your Home</p>
+                  </div>
+                  <img src="../images/meet.png" alt="" class="img-publi-3">
+                  <div class="oval"></div>
+                    <button type="button" class="promotions btn btn-warning text-light pb-0">Shop Now <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+          </div>
         </div>
-        <div class="justify-content-end text-center ms-5">
-          <a class="navbar-brand fs-5 px-3 text-center m-0 border-end" href="#"><i class="fa-solid fa-phone-volume"></i></a>
-          <a class="navbar-brand fs-5 px-3 text-center m-0 border-end" href="./favorites.html"><i class="fa-solid fa-heart"></i></a>
-          <div class="btn-group dropdown-hover">
-            <button type="button" class="btn btn-transparent dropdown-toggle-invisible" data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="fa-solid fa-cart-shopping"></i>
-            </button>
-            <ul class="dropdown-menu"   id="a" >
-                <!-- ************aqui se renderiza los productos en cart dropdown*********** -->
-              <li class=" container-cart-dropdown" id="b">
+      </div>
+    </section>
+    <hr>
 
+    <section>
+      <div class="container p-5 p-md-0">
+        <div class="row">
+          <div class="col-4 d-none d-md-block">
+            <li class="p-2">Category</li>
+            <li><div class="progress mb-3" style="height: 2px;">
+              <div class="progress-bar bg-success" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <ul id="container-categories-2">
+              <li class="d-flex align-items-center mb-3"><a class="dropdown-item filter-category" id="Vegetables & fruits" href="#">
+                <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/vegetable.svg" alt="" style="max-width:20px";><span class="ps-2" id="Vegetables & fruits"> Vegetables & fruits</span> </a>
               </li>
-              <li><p class="ps-3 m-2"> Total: </p></li>
-              <li>
-                <div class="row justify-content-between">
-                  <div class="col ms-3">  <a href="./cart.html" class="btn btn-outline-success"> View Cart</a></div>
-                  <div class="col pe-3 me-3 d-flex justify-content-end"> <a href="./cart.html" class="btn btn-success"> View Cart</a></div>
-                </div>
+              <li class="d-flex align-items-center mb-3"><a class="dropdown-item filter-category" id="Beverages" href="#">
+                <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/cup.svg" alt="" style="max-width:20px";><span class="ps-2" id="Beverages"> Beverages</span> </a>
+              </li>
+              <li class="d-flex align-items-center mb-3"><a class="dropdown-item filter-category" id="Meats & Seafood" href="#">
+                <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/meats.svg" alt="" style="max-width:20px";><span class="ps-2" id="Meats & Seafood">Meats & Seafood </span> </a>
+              </li>
+              <li class="d-flex align-items-center mb-3"><a class="dropdown-item filter-category" id="Breakfast & Dairy" href="#">
+                <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/breakfast.svg" alt="" style="max-width:20px";><span class="ps-2" id="Breakfast & Dairy">Breakfast & Dairy </span> </a>
+              </li>
+              <li class="d-flex align-items-center mb-3"><a class="dropdown-item filter-category" id="Frozen Food" href="#">
+                <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/frozen.svg" alt="" style="max-width:20px";><span class="ps-2" id="Frozen Food">Frozen Food </span> </a>
+              </li>
+              <li class="d-flex align-items-center mb-3"><a class="dropdown-item filter-category" id="Biscuit & Snack" href="#">
+                <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/biscuit.svg" alt="" style="max-width:20px";><span class="ps-2" id="Biscuit & Snack">Biscuit & Snack </span> </a>
+              </li>
+              <li class="d-flex align-items-center mb-3"><a class="dropdown-item filter-category" id="Grocery & Staples" href="#">
+                <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/grocery.svg" alt="" style="max-width:20px";><span class="ps-2" id="Grocery & Staples">Grocery & Staples </span> </a>
+              </li>
+              <li class="d-flex align-items-center mb-3"><a class="dropdown-item filter-category" id="Wines & Alcohol Drinks" href="#">
+                <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/drink.svg" alt="" style="max-width:15px";><span class="ps-2" id="Wines & Alcohol Drinks">Wines & Alcohol Drinks </span> </a>
+              </li>
+              <li class="d-flex align-items-center mb-3"><a class="dropdown-item filter-category" id="Milk & Daires" href="#">
+                <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/milk.svg" alt="" style="max-width:15px";><span class="ps-2" id="Milk & Daires">Milk & Daires </span> </a>
+              </li>
+              <li class="d-flex align-items-center mb-3"><a class="dropdown-item filter-category" id="Pet Food" href="#">
+                <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/pet.svg" alt="" style="max-width:20px";><span class="ps-2" id="Pet Food">Pet Food </span> </a>
               </li>
             </ul>
 
           </div>
-          <a class="navbar-brand fs-5 px-3 text-center m-0" href="./formLogin.html"><i class="fa-regular fa-user"></i></a>
-        </div>
-      </nav>
-    </div>
-
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container container-fluid px-0">
-        <div class="dropdown">
-          <button class="btn btn-success border-0 dropdown-toggle-invisible" type="button" id="dropdown2" data-bs-toggle="dropdown" aria-expanded="false">
-           <div class="d-flex align-items-center p-1"> <span class="material-symbols-outlined px-2">tune</span> <span class="px-2 "> All Categories</span></div>
-          </button>
-          <ul class="dropdown-menu dropdown-menu-light bg-secondary" id="container-categories" aria-labelledby="dropdown2">
-            <li><a class="dropdown-item active bg-secondary text-dark" href="#">Category</a></li>
-            <li><div class="progress" style="height: 1px;">
-              <div class="progress-bar bg-success" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-            </div></li>
-            <!-- <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-            <li><a class="dropdown-item" href="#">Separated link</a></li> -->
-          </ul>
-        </div>
-        <button class="navbar-toggler dropdown-toggle-invisible" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse fs-5" id="navbarScroll">
-          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll justify-content-center tyle="--bs-scroll-height: 100px;">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Home
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Shop
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Product
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Mega Menú
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Blog
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Pages
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled">Contact</a>
-            </li>
-          </ul>
-          <i class="fa-solid fa-bolt p-2 bg-secondary ms-5"></i>
-
-        </div>
-      </div>
-    </nav>
-  </header>
-
-
-  <section>
-
-
-  <div class="container">
-      <div class="row ">
-        <div class="col-12 col-md-7  bg-info rounded-3 me-4">
-          <div class="row align-items-center">
-            <div class="col ps-2 ps-md-5">
-              <p  class="fs-5"> Exclusive offer <span class="badge rounded-pill bg-warning bg-opacity-10 text-danger">30% off</span></p>
-              <h3>STAY HOME & DELIVERED YOUR</h3>
-              <h3><span class="text-success fw-bold fs-1">DAILY NEEDS</span></h3>
-              <p>vegetables contain many vitamins and minerals that are good for your health.</p>
-              <button type="button" class="btn btn-danger">Shop Now <i class="fa-solid fa-arrow-right"></i></button>
+          <div class="col-12 col-md-8 px-0">
+            <div class="row">
+              <h3 class="">Top Save Today</h3>
             </div>
-            <div class="col pb-0">
-              <img src="../images/frutas-banner.png" alt="" style="max-height: 450px;">
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-5" style="max-width: 450px;">
-          <div class="row rounded-3 py-3" style="background-image: linear-gradient(rgba(249, 245, 245, 0.4),rgba(253, 252, 252, 0.4)), url(../images/bg-nut.png); background-size: cover;">
-            <div class="row align-items-center">
-              <div class="col ps-3 w-50">
-                <p class="text-danger fs-3 mb-0 fw-bold">45% <span class="text-dark fs-6"> OFF</span></p>
-                <h3><span class="text-success fw-bold fs-5 pt-0 mt-0">Nut Colection</span></h3>
-                <p class="w-50">We deliver organic vegetables & fruits</p>
-                <button type="button" class="btn btn-transparent ps-0">Shop Now <i class="fa-solid fa-arrow-right"></i></button>
+            <div class="row ">
+              <div class="col-12 col-md-8">
+                <div class="row align-items-center justify-content-start ps-3">
+                  <div class="col-1 bg-success" style="height: 2px; width: 10%;">
+                  </div>
+                  <div class="col-1">
+                    <span> <i class="fa-solid fa-seedling text-success fs-3"></i></span>
+                  </div>
+                  <div class="col-1 bg-success" style="height: 2px; width: 10%">
+                  </div>
+                </div>
+                <p>Don't miss this opportunity at a special discount just for this week</p>
               </div>
+                <div class="col-md-4">
+                  <!-- Contador regresivo -->
+                  <div class="row text-center bg-danger counter rounded-2 py-2 text-light">
+                    <span class="col-4 text-light"><small>Expires in:</small></span>
+                    <span class="col text-light" id="days"></span>
+                    <span class="col text-light" id="hours"></span>
+                    <span class="col text-light" id="minutes"></span>
+                    <span class="col text-light" id="seconds"></span>
+                  </div>
+            <!-- Fin contador regresivo -->
+                </div>
+
             </div>
-          </div>
-          <div class="row rounded-3 py-3 mt-4" style="background-image: linear-gradient(rgba(249, 245, 245, 0.1),rgba(253, 252, 252, 0.1)), url(../images/bg-3.jpg); background-size: cover;">
-            <div class="row align-items-center">
-              <div class="col ps-3 w-50">
-                <h3><span class="text-success fw-bold fs-5 pt-0 mt-0">HeaktyFood</span></h3>
-                <p class="text-danger fs-5 mb-0">Organic Market</p>
-                <p class="w-50">Start your daily shopping with som...</p>
-                <button type="button" class="btn btn-transparent ps-0">Shop Now <i class="fa-solid fa-arrow-right"></i></button>
-              </div>
+            <div class="row row-cols-1 row-cols-md-3 g-0  container-products" id="btns-link">
+
+              <!-- ***************product from product.js***************** -->
+
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section>
-    <div class="container">
-      <div class="row mt-4">
-        <div class="col-12 col-md-4">
-            <div class="row align-items-center ">
-              <div class="col ps-0 bg-info  bg-card-offer py-3 rounded-3" style="position: relative; height: 12rem;">
-                <div class=" bg-offer p-0 m-0">
-                  <p class="text-danger ps-3 fs-5 mb-0">5% OFF</p>
-                  <p class=" fw-bold ps-3  pt-0 mt-0 mb-0">Hot Deals on New Items</p>
-                  <p class="ps-3 pt-0 mt-0">Daily Essentials Eggs & Dairy</p>
-                </div>
-                <img src="../images/eggs.png" alt="" class="img-publi-3 egg">
-                <div class="oval"></div>
-                  <button type="button" class="promotions btn btn-success text-light pb-0">Shop Now <i class="fa-solid fa-arrow-right"></i></button>
+
+    <section class="bg-info">
+      <div class="container pt-3 px-3">
+        <div class="row">
+          <div class="col-3 ">
+            <img src="../images/logo.png" alt="" style="width: 50%;" class="mb-3">
+            <p>An online platform where users can browse a wide variety of products from different categories</p>
+            <p><i class="fa-solid fa-house-chimney"></i><span class="ps-2">1418 Riverwood Drive, CA 96052, US</span></p>
+            <p><i class="fa-solid fa-envelope"></i><span class="ps-2">support@fastkart.com</span></p>
+          </div>
+          <div class="col ">
+            <h6 class="mb-3">Categories</h6>
+            <p>Vegetables & fruits</p>
+            <p>Beverages</p>
+            <p>Frozen Foods</p>
+            <p>Biscuits & Snacks</p>
+            <p>Groceries & Staples</p>
+          </div>
+          <div class="col">
+            <h6 class="mb-3">Useful Links</h6>
+            <p>Home</p>
+            <p>Shop</p>
+            <p>About Us</p>
+            <p>Blog</p>
+            <p>Contact Us</p>
+          </div>
+          <div class="col ">
+            <h6 class="mb-3">Help Center</h6>
+            <p>Your Order</p>
+            <p>Your Account</p>
+            <p>Track Order</p>
+            <p>Your WishList</p>
+            <p>Search</p>
+            <p>FAQ</p>
+          </div>
+          <div class="col">
+            <div class="row">
+              <h6 class="mb-4">Contact Us</h6>
+              <p><i class="fa-solid fa-phone"></i><span class="ps-2">HotLine 24/7: <br > <span class="ps-4 fw-bold">+91 888 104 2340</span> </span></p>
+              <hr>
+            </div>
+            <div class="row">
+              <h6 class="mb-4">Contact Us</h6>
+              <p><i class="fa-solid fa-envelope"></i><span class="ps-2">Email Address: <br > <span class="ps-4 fw-bold">fastkart@hotmail.com</span> </span></p>
+              <hr>
+            </div>
+            <p>Download app:</p>
+            <div class="row p-0 align-items-center">
+              <div class="col-6">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx3qYW0NCqkolO0D64U6CLRz2dJqB-ALn_MQ&usqp=CAU" alt="" style="max-width: 100%;">
+              </div>
+              <div class="col-6">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5HudE2ZgEZPomI1KkhV6TeEleQjo7vBkFKw&usqp=CAU" alt="" style="max-width: 100%;">
               </div>
             </div>
+          </div>
+          <hr class="mt-4">
 
         </div>
-        <div class="col-12 col-md-4">
-          <div class="row g-1 rounded-3">
-              <div class="col ps-0 bg-info bg-card-offer py-3 rounded-3" style="position: relative; height: 12rem;">
-                <div class=" bg-offer p-0 m-0">
-                  <p class="text-danger ps-3 fs-5 mb-0">5% OFF</p>
-                  <p class=" fw-bold ps-3  pt-0 mt-0 mb-0">Buy More & Save More</p>
-                  <p class="ps-3 pt-0 mt-0">Fresh Vegetables</p>
-                </div>
-                <img src="../images/fruit.png" alt="" class="img-publi-3">
-                <div class="oval"></div>
-                  <button type="button" class="promotions btn btn-danger text-light pb-0">Shop Now <i class="fa-solid fa-arrow-right"></i></button>
-              </div>
+
+        <div class="row justify-content-between pb-3">
+          <div class="col">
+            <p>©2022 Fastkart all rights reserved</p>
+          </div>
+
+          <div class="col">
+            <i class="fa-brands fa-cc-paypal payment-methods"></i>
+            <i class="fa-brands fa-cc-visa payment-methods"></i>
+            <i class="fa-brands fa-cc-mastercard payment-methods"></i>
+            <i class="fa-brands fa-stripe payment-methods"></i>
+            <i class="fa-brands fa-cc-amex payment-methods"></i>
+          </div>
+          <div class="col">
+            <span class="pe-3">Stay connected:</span>
+            <i class="fa-brands fa-facebook-f social-link"></i>
+            <i class="fa-brands fa-twitter social-link"></i>
+            <i class="fa-brands fa-instagram social-link"></i>
+            <i class="fa-brands fa-pinterest social-link"></i>
           </div>
         </div>
-        <div class="col-12 col-md-4">
-          <div class="row rounded-3">
-              <div class="col ps-0 bg-info bg-card-offer py-3 rounded-3" style="position: relative; height: 12rem;">
-                <div class=" bg-offer p-0 m-0">
-                  <p class="text-danger ps-3 fs-5 mb-0">5% OFF</p>
-                  <p class=" fw-bold ps-3  pt-0 mt-0 mb-0">Organic Meat Prepared</p>
-                  <p class="ps-3 pt-0 mt-0">Delivered to Your Home</p>
-                </div>
-                <img src="../images/meet.png" alt="" class="img-publi-3">
-                <div class="oval"></div>
-                  <button type="button" class="promotions btn btn-warning text-light pb-0">Shop Now <i class="fa-solid fa-arrow-right"></i></button>
-              </div>
-          </div>
-        </div>
+
+          <img src="https://www.flaticon.com/free-icon/fruit_2902017?term=vegetable&related_id=2902017" alt="">
       </div>
-    </div>
-  </section>
-  <hr>
+    </section>
 
-  <section>
-    <div class="container p-5 p-md-0">
-      <div class="row">
-        <div class="col-4 d-none d-md-block">
-
-        </div>
-        <div class="col-12 col-md-8 px-0">
-          <div class="row">
-            <h3 class="">Top Save Today</h3>
-          </div>
-          <div class="row ">
-            <div class="col-12 col-md-8">
-              <div class="row align-items-center justify-content-start ps-3">
-                <div class="col-1 bg-success" style="height: 2px; width: 10%;">
-                </div>
-                <div class="col-1">
-                  <span> <i class="fa-solid fa-seedling text-success fs-3"></i></span>
-                </div>
-                <div class="col-1 bg-success" style="height: 2px; width: 10%">
-                </div>
-              </div>
-              <p>Don't miss this opportunity at a special discount just for this week</p>
-            <div class="col-4">
-
-
-            </div>
-            </div>
-
-          </div>
-          <div class="row row-cols-1 row-cols-md-3 g-0  container-products" id="btns-link">
-
-            <!-- ***************product from product.js***************** -->
-
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-
-  <section class="bg-info">
-    <div class="container pt-3 px-3">
-      <div class="row">
-        <div class="col-3 ">
-          <img src="../images/logo.png" alt="" style="width: 50%;" class="mb-3">
-          <p>An online platform where users can browse a wide variety of products from different categories</p>
-          <p><i class="fa-solid fa-house-chimney"></i><span class="ps-2">1418 Riverwood Drive, CA 96052, US</span></p>
-          <p><i class="fa-solid fa-envelope"></i><span class="ps-2">support@fastkart.com</span></p>
-        </div>
-        <div class="col ">
-          <h6 class="mb-3">Categories</h6>
-          <p>Vegetables & fruits</p>
-          <p>Beverages</p>
-          <p>Frozen Foods</p>
-          <p>Biscuits & Snacks</p>
-          <p>Groceries & Staples</p>
-        </div>
-        <div class="col">
-          <h6 class="mb-3">Useful Links</h6>
-          <p>Home</p>
-          <p>Shop</p>
-          <p>About Us</p>
-          <p>Blog</p>
-          <p>Contact Us</p>
-        </div>
-        <div class="col ">
-          <h6 class="mb-3">Help Center</h6>
-          <p>Your Order</p>
-          <p>Your Account</p>
-          <p>Track Order</p>
-          <p>Your WishList</p>
-          <p>Search</p>
-          <p>FAQ</p>
-        </div>
-        <div class="col">
-          <div class="row">
-            <h6 class="mb-4">Contact Us</h6>
-            <p><i class="fa-solid fa-phone"></i><span class="ps-2">HotLine 24/7: <br > <span class="ps-4 fw-bold">+91 888 104 2340</span> </span></p>
-            <hr>
-          </div>
-          <div class="row">
-            <h6 class="mb-4">Contact Us</h6>
-            <p><i class="fa-solid fa-envelope"></i><span class="ps-2">Email Address: <br > <span class="ps-4 fw-bold">fastkart@hotmail.com</span> </span></p>
-            <hr>
-          </div>
-          <p>Download app:</p>
-          <div class="row p-0 align-items-center">
-            <div class="col-6">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx3qYW0NCqkolO0D64U6CLRz2dJqB-ALn_MQ&usqp=CAU" alt="" style="max-width: 100%;">
-            </div>
-            <div class="col-6">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5HudE2ZgEZPomI1KkhV6TeEleQjo7vBkFKw&usqp=CAU" alt="" style="max-width: 100%;">
-            </div>
-          </div>
-        </div>
-        <hr class="mt-4">
-
-      </div>
-
-      <div class="row justify-content-between pb-3">
-        <div class="col">
-          <p>©2022 Fastkart all rights reserved</p>
-        </div>
-
-        <div class="col">
-          <i class="fa-brands fa-cc-paypal payment-methods"></i>
-          <i class="fa-brands fa-cc-visa payment-methods"></i>
-          <i class="fa-brands fa-cc-mastercard payment-methods"></i>
-          <i class="fa-brands fa-stripe payment-methods"></i>
-          <i class="fa-brands fa-cc-amex payment-methods"></i>
-        </div>
-        <div class="col">
-          <span class="pe-3">Stay connected:</span>
-          <i class="fa-brands fa-facebook-f social-link"></i>
-          <i class="fa-brands fa-twitter social-link"></i>
-          <i class="fa-brands fa-instagram social-link"></i>
-          <i class="fa-brands fa-pinterest social-link"></i>
-        </div>
-      </div>
-
-<img src="https://www.flaticon.com/free-icon/fruit_2902017?term=vegetable&related_id=2902017" alt="">
-
-
-
-    </div>
-
-
-
-   </section>
-
-
-
-
-
-   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-   <script src="../scripts/products.js" type="module"></script>
-  <script src="../scripts/cart.js" type="module"></script>
-  <script src="../scripts/product.js" type="module"></script>
-  <script src="../scripts/search.js" type="module"></script>
-  <script src="../scripts/categories.js" type="module"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
-  <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-</body>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../scripts/products.js" type="module"></script>
+    <script src="../scripts/cart.js" type="module"></script>
+    <script src="../scripts/product.js" type="module"></script>
+    <script src="../scripts/search.js" type="module"></script>
+    <script src="../scripts/categories.js" type="module"></script>
+    <script src="../scripts/favorites.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
 </html>

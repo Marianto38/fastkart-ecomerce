@@ -1,8 +1,9 @@
 console.log("conectado admin");
 import { getProductsFromUrl, urlProducts } from "./products.js";
-const urlUsers = "http://localhost:3000/users";
-const formNewProduct = document.querySelector(".form-new-product");
 const containerFormEditProduct = document.getElementById("form-edit-product");
+const formNewProduct = document.querySelector(".form-new-product");
+const urlAllBuys = "http://localhost:3000/allbuys";
+const urlUsers = "http://localhost:3000/users";
 let itemId = "";
 
 // **************Crear Productos******************
@@ -20,7 +21,8 @@ const createProduct = () => {
       if (input.nodeName === "INPUT") {
         // Verifica si el campo está vacío o solo contiene espacios en blanco
         if (input.value.trim().length === 0) {
-          alert(`El campo "${input.name}" no puede estar vacío.`);
+          Swal.fire(`El campo "${input.name}" no puede estar vacío.`);
+
           hasErrors = true;
           break;
         }
@@ -96,15 +98,26 @@ document.addEventListener("click", async (event) => {
   const dataItem = event.target.getAttribute("data");
 
   if (dataItem === "edit") {
-    // alert("voy a editar info")
     localStorage.setItem("productToEdit", JSON.stringify(itemId));
     await loadProductToEdit();
 
     // window.location.href = "../pages/formEditProduct.html";
   } else if (dataItem === "delete") {
-    alert("voy a borrar", itemId);
-    localStorage.setItem("productToDelete", JSON.stringify(itemId));
-    deleteProductById();
+    Swal.fire({
+      title: "Estas seguro de borrar el producto?",
+      text: "No podrás reversar esta operación!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Si, borrar!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        localStorage.setItem("productToDelete", JSON.stringify(itemId));
+        deleteProductById();
+        Swal.fire("Borrado!", "El producto ha sido borrado", "success");
+      }
+    });
   }
 });
 
@@ -113,14 +126,10 @@ document.addEventListener("click", async (event) => {
 const loadProductToEdit = async () => {
   const productIdFromJson =
     JSON.parse(localStorage.getItem("productToEdit")) || 0;
-  // alert(productIdFromJson)
-  // alert(typeof(Number(productIdFromJson)))
-  // alert(urlProducts)
   const product = await axios.get(
     `${urlProducts}/${Number(productIdFromJson)}`
   );
   const nombre = product.data.name;
-  // alert(nombre)
   console.log(product);
   const form = document.querySelector("#product-form");
   console.log(form);
@@ -159,7 +168,7 @@ const editProduct = (id) => {
       if (input.nodeName === "INPUT") {
         // Verifica si el campo está vacío o solo contiene espacios en blanco
         if (input.value.trim().length === 0) {
-          alert(`El campo "${input.name}" no puede estar vacío.`);
+          Swal.fire(`El campo "${input.name}" no puede estar vacío.`);
           hasErrors = true;
           break;
         }
@@ -211,4 +220,45 @@ const deleteProductById = async () => {
   } catch (error) {
     console.error(error);
   }
+};
+
+// ********imprimir compras para el administrador**************
+
+const containerBuy = document.getElementById("container-buy");
+console.log(containerBuy);
+
+const printBuysInShowBuys = async () => {
+  const buys = await getProductsFromUrl(urlAllBuys);
+  buys.forEach((buy) => {
+    console.log(buy.objectInBuys[0].Nombre);
+    buy.objectInBuys[1].forEach((products) => {
+      console.log(products.name);
+    });
+    printBuy(containerBuy, buy);
+  });
+};
+printBuysInShowBuys();
+
+const printBuy = (container, buy) => {
+  container.innerHTML += `
+  <div class="col-1 d-flex align-items-center  border-bottom">
+  <p>${buy.id}</p>
+  </div>
+    <div class="col-4  border-bottom">
+      <ul>
+        <li>${buy.objectInBuys[0].Nombre}</li>
+        <li>${buy.objectInBuys[0].dirección}</li>
+        <li>${buy.objectInBuys[0].Teléfono}</li>
+      </ul>
+    </div>
+    <div class=" row col-7  border-bottom">
+          ${buy.objectInBuys[1]
+            .map(
+              (element) =>
+                `<div class="row"><div class="col">${element.name}</div> <div class="col">${element.weight}</div> <div class="col">${element.price}</div> <div class="col">${element.quantity}</div> </div>`
+            )
+            .join("")}
+    </div>
+    <hr>
+  `;
 };

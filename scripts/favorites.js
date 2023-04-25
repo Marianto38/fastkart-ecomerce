@@ -35,7 +35,7 @@ export const printProductsInFavorites = async () => {
         <p class="card-text text-truncate">${product.category}</p>
         <h5 class="card-title title fs-6">${product.name} ${product.weight}</h5>
         <p class="card-text text-truncate">${product.weight}</p>
-        <p class="card-text text-truncate">$${product.price} <span class="text-decoration-line-through"> $${product.price - (product.price * product.discount / 100)}</span></p>
+        <p class="card-text text-truncate text-success">$${product.price} <span class="text-decoration-line-through text-dark"> $${product.price - (product.price * product.discount / 100)}</span></p>
       </div>
       <div>
         <div class="row bg-success justify-content-center align-items-center mx-2  mb-3 py-1 rounded-pill">
@@ -83,6 +83,9 @@ async function deleteData(id) {
 deleteData(Number(favoriteId))
 }
 });
+
+// const printHeart = document.querySelector('.print-heart-red')
+// console.log(printHeart)
 
 //4. Escucho el click sobre cada product
 document.addEventListener("click", (event) => {

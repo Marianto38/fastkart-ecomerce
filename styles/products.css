@@ -32,6 +32,7 @@ top: 35%;
 font-size: 100%;
 visibility: hidden;
 }
+
 .card-product:hover .card-links{
   display: flex;
   position: absolute;
@@ -40,6 +41,7 @@ visibility: hidden;
   top: 35%;
   font-size: 130%;
   visibility: visible;
+  transition: all 0.3s ease-in-out;
 
   }
   .card-product:hover .close-btn {
@@ -47,6 +49,9 @@ visibility: hidden;
   }
 .bg-success {
   background-color: #0da487 !important;
+}
+.rojo {
+  color: red !important;
 }
 
 .flag {
@@ -197,6 +202,21 @@ backdrop-filter: blur(5px);
 }
 .over {
   overflow-y: auto;
+}
+
+.btn .badge {
+  position: relative;
+  top: -12px;
+  left: -5px;
+  font-size: 8px;
+  padding: 2px;
+  width: 14px;
+  height: 14px;
+}
+
+.container-cart-dropdown {
+  max-height: 300px;
+  overflow-y: scroll;
 }
 
 /* ******************maedia query******************** */
